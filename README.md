@@ -1,4 +1,4 @@
-# 🍔 BURGER BAR - Showcase Website
+# 🍔 BURGMEN - Showcase Website
 
 **Brutalni showcase website za burger bar** kreiran sa React + Vite + Tailwind CSS + Framer Motion.
 
@@ -7,26 +7,27 @@
 ## ✨ Key Features
 
 ### 🎨 Visual Design
-- **Pure Black Background** - Čista crna (#000) sa animated grain texture
-- **Floating Gradient Orbs** - 5 orba (red/orange/yellow) sa slow float animacijama
+- **Video Dim Pozadina** - Looped video (`pozadinastranice.mp4`) sa fixed pozicijom
+- **Floating Gradient Orbs** - 4 flame orba (orange/red/yellow) sa slow float animacijama
 - **Glassmorphism Navbar** - Transparent blur → solid effect nakon scroll-a
-- **Massive Typography** - text-[10rem] na desktop, font-black, brutalno
+- **Massive Typography** - "LEGENDARNI BURGERI", font-black, brutalno
+- **Lokalne Slike** - 5 custom burger slika iz `/public` foldera
 
 ### 🎭 Brutalne Animacije
 - **Hero**: Word-by-word stagger reveal (3D perspective)
 - **Burgers**: Alternating slide-in (lijevo-desno-lijevo) sa Intersection Observer
 - **Parallax**: Scroll-triggered reveal animacije
 - **Hover**: Scale, glow borders, smooth transitions
-- **Background**: Continuous floating orbs (20-25s loops)
+- **Background**: Video dim + floating flame orbs (optimizovano)
 - **Grain**: Animated noise texture (subtle movement)
 
 ### 📱 Sections
 
-1. **Hero** - Fullscreen sa "LEGENDARY BURGERS" title, scroll indicator
-2. **Burger Showcase** - 8 burgera, alternating 50/50 split layout
-3. **About** - Story + animated stats (Since 2025, 100% Fresh, Legendary Taste)
+1. **Hero** - Fullscreen sa "LEGENDARNI BURGERI" title, scroll indicator
+2. **Burger Showcase** - 8 burgera, alternating 50/50 split layout (5 lokalnih + 3 Unsplash)
+3. **About** - "Naša Priča" + animated stats (Od 2025, 100% Svježi sastojci)
 4. **Gallery** - Masonry grid sa lightbox modal
-5. **Contact** - Dark card sa info, social links, "Visit Us" CTA
+5. **Contact** - Dark card sa info (Sarajevo, BiH), social links, "Posjetite nas" CTA
 6. **Footer** - Minimal, copyright, social icons
 
 ### 🚫 ŠTO NIJE UKLJUČENO (BY DESIGN):
@@ -41,12 +42,12 @@
 
 ```json
 {
-  "react": "^18.x",
-  "vite": "^5.x",
+  "react": "^19.2.0",
+  "vite": "^7.2.2",
   "tailwindcss": "^3.x",
-  "framer-motion": "^11.x",
-  "lucide-react": "^0.x",
-  "react-intersection-observer": "^9.x",
+  "framer-motion": "^12.23.24",
+  "lucide-react": "^0.553.0",
+  "react-intersection-observer": "^10.0.0",
   "postcss": "^8.x"
 }
 ```
