@@ -21,7 +21,7 @@ const AnimatedBackground = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Flame intensity increases on scroll
+  // Flame intensity increases on scroll (throttled for performance)
   const flameIntensity = useTransform(scrollY, [0, 1000], [0.25, 0.4]);
 
   // If reduced motion is preferred, show static gradient
@@ -87,9 +87,9 @@ const AnimatedBackground = () => {
               scale: [1, 1.15, 1],
             }}
             transition={{
-              duration: 9,
+              duration: 12,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: "easeInOut",
               repeatType: 'loop',
             }}
           />
@@ -115,9 +115,9 @@ const AnimatedBackground = () => {
               scale: [1, 1.08, 1],
             }}
             transition={{
-              duration: 11,
+              duration: 14,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: "easeInOut",
               repeatType: 'loop',
               delay: 1,
             }}
@@ -144,9 +144,9 @@ const AnimatedBackground = () => {
               scale: [1, 1.12, 1],
             }}
             transition={{
-              duration: 7,
+              duration: 10,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: "easeInOut",
               repeatType: 'loop',
               delay: 2,
             }}
@@ -173,9 +173,9 @@ const AnimatedBackground = () => {
               opacity: [0.25, 0.4, 0.25],
             }}
             transition={{
-              duration: 5,
+              duration: 8,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: "easeInOut",
               repeatType: 'loop',
               delay: 0.5,
             }}
@@ -204,9 +204,9 @@ const AnimatedBackground = () => {
             scale: [1, 1.1, 1],
           }}
           transition={{
-            duration: 8,
+            duration: 10,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
             repeatType: 'loop',
           }}
         />
