@@ -12,31 +12,33 @@ const BurgerCard = ({ burger, index, isReversed }) => {
       // Check for mobile or low-end devices
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
       const isSlowCPU = navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4;
-      setIsLowPerformance(isMobile || isSlowCPU);
+      const isSmallScreen = window.innerWidth < 768;
+      setIsLowPerformance(isMobile || isSlowCPU || isSmallScreen);
     };
     checkPerformance();
+    
+    window.addEventListener('resize', checkPerformance);
+    return () => window.removeEventListener('resize', checkPerformance);
   }, []);
 
   const { ref, inView } = useInView({
-    threshold: isLowPerformance ? 0.3 : 0.4,
+    threshold: isLowPerformance ? 0.2 : 0.35,
     triggerOnce: true,
-    rootMargin: '-100px', // Trigger only when element is well into viewport
+    rootMargin: isLowPerformance ? '-50px' : '-80px',
   });
 
-  // Simplified animations for low-performance devices
+  // Ultra smooth animations with reduced distance for mobile
   const imageVariants = {
     hidden: { 
       opacity: 0, 
-      x: isLowPerformance ? (isReversed ? 80 : -80) : (isReversed ? 120 : -120),
-      y: 0
+      x: isLowPerformance ? (isReversed ? 40 : -40) : (isReversed ? 100 : -100),
     },
     visible: { 
       opacity: 1, 
       x: 0,
-      y: 0,
       transition: {
-        duration: isLowPerformance ? 0.8 : 1,
-        ease: [0.22, 1, 0.36, 1], // Custom cubic-bezier for smooth deceleration
+        duration: isLowPerformance ? 0.6 : 0.9,
+        ease: [0.16, 1, 0.3, 1], // Ultra smooth easing
       }
     }
   };
@@ -44,17 +46,15 @@ const BurgerCard = ({ burger, index, isReversed }) => {
   const contentVariants = {
     hidden: { 
       opacity: 0, 
-      x: isLowPerformance ? (isReversed ? -80 : 80) : (isReversed ? -120 : 120),
-      y: 0
+      x: isLowPerformance ? (isReversed ? -40 : 40) : (isReversed ? -100 : 100),
     },
     visible: { 
       opacity: 1, 
       x: 0,
-      y: 0,
       transition: {
-        duration: isLowPerformance ? 0.8 : 1,
-        delay: 0.15,
-        ease: [0.22, 1, 0.36, 1],
+        duration: isLowPerformance ? 0.6 : 0.9,
+        delay: isLowPerformance ? 0.1 : 0.15,
+        ease: [0.16, 1, 0.3, 1],
       }
     }
   };
@@ -81,7 +81,6 @@ const BurgerCard = ({ burger, index, isReversed }) => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         className={`relative ${isReversed ? 'lg:order-2' : 'lg:order-1'}`}
-        style={{ willChange: 'transform, opacity' }}
       >
         <div className="relative group overflow-hidden rounded-2xl">
           {/* Glow Border - disabled on low-performance */}
@@ -91,13 +90,12 @@ const BurgerCard = ({ burger, index, isReversed }) => {
           
           {/* Image */}
           <motion.img
-            whileHover={!isLowPerformance ? { scale: 1.05 } : {}}
-            transition={{ duration: 0.4 }}
+            whileHover={!isLowPerformance ? { scale: 1.03 } : {}}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             src={burger.image}
             alt={burger.name}
             className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover rounded-2xl relative z-10"
             loading="lazy"
-            style={{ willChange: isLowPerformance ? 'auto' : 'transform' }}
           />
           
           {/* Overlay */}
@@ -111,16 +109,15 @@ const BurgerCard = ({ burger, index, isReversed }) => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         className={`relative ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}
-        style={{ willChange: 'transform, opacity' }}
       >
         {/* Burger Name */}
         <motion.h3
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ 
-            duration: 0.7, 
-            delay: 0.25,
-            ease: [0.22, 1, 0.36, 1]
+            duration: isLowPerformance ? 0.5 : 0.6, 
+            delay: isLowPerformance ? 0.15 : 0.2,
+            ease: [0.16, 1, 0.3, 1]
           }}
           className="text-5xl sm:text-6xl lg:text-7xl font-black text-burger-white uppercase tracking-tighter mb-6 leading-none"
         >
@@ -129,12 +126,12 @@ const BurgerCard = ({ burger, index, isReversed }) => {
 
         {/* Description */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ 
-            duration: 0.6, 
-            delay: 0.4,
-            ease: [0.22, 1, 0.36, 1]
+            duration: isLowPerformance ? 0.4 : 0.5, 
+            delay: isLowPerformance ? 0.25 : 0.3,
+            ease: [0.16, 1, 0.3, 1]
           }}
           className="text-lg sm:text-xl text-burger-gray leading-relaxed italic mb-8"
         >
@@ -146,20 +143,20 @@ const BurgerCard = ({ burger, index, isReversed }) => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ 
-            duration: 0.5, 
-            delay: 0.5 
+            duration: 0.4, 
+            delay: isLowPerformance ? 0.35 : 0.4 
           }}
           className="space-y-3"
         >
           {burger.ingredients.map((ingredient, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -15 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ 
-                duration: 0.4, 
-                delay: 0.6 + i * 0.08,
-                ease: [0.22, 1, 0.36, 1]
+                duration: 0.3, 
+                delay: (isLowPerformance ? 0.4 : 0.45) + i * 0.05,
+                ease: [0.16, 1, 0.3, 1]
               }}
               className="flex items-center gap-3"
             >
@@ -174,7 +171,7 @@ const BurgerCard = ({ burger, index, isReversed }) => {
           <motion.div
             initial={{ width: 0 }}
             animate={inView ? { width: '100%' } : {}}
-            transition={{ duration: 0.8, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="h-1 bg-gradient-to-r from-burger-red via-burger-orange to-transparent mt-12 rounded-full"
           />
         )}
