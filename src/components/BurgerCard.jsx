@@ -18,25 +18,25 @@ const BurgerCard = ({ burger, index, isReversed }) => {
   }, []);
 
   const { ref, inView } = useInView({
-    threshold: isLowPerformance ? 0.1 : 0.2,
+    threshold: isLowPerformance ? 0.3 : 0.4,
     triggerOnce: true,
-    rootMargin: '50px', // Start animation earlier
+    rootMargin: '-100px', // Trigger only when element is well into viewport
   });
 
   // Simplified animations for low-performance devices
   const imageVariants = {
     hidden: { 
       opacity: 0, 
-      x: isLowPerformance ? 0 : (isReversed ? 60 : -60),
-      y: isLowPerformance ? 20 : 0
+      x: isLowPerformance ? (isReversed ? 80 : -80) : (isReversed ? 120 : -120),
+      y: 0
     },
     visible: { 
       opacity: 1, 
       x: 0,
       y: 0,
       transition: {
-        duration: isLowPerformance ? 0.5 : 0.7,
-        ease: [0.25, 0.46, 0.45, 0.94], // Smoother easing
+        duration: isLowPerformance ? 0.8 : 1,
+        ease: [0.22, 1, 0.36, 1], // Custom cubic-bezier for smooth deceleration
       }
     }
   };
@@ -44,17 +44,17 @@ const BurgerCard = ({ burger, index, isReversed }) => {
   const contentVariants = {
     hidden: { 
       opacity: 0, 
-      x: isLowPerformance ? 0 : (isReversed ? -60 : 60),
-      y: isLowPerformance ? 20 : 0
+      x: isLowPerformance ? (isReversed ? -80 : 80) : (isReversed ? -120 : 120),
+      y: 0
     },
     visible: { 
       opacity: 1, 
       x: 0,
       y: 0,
       transition: {
-        duration: isLowPerformance ? 0.5 : 0.7,
-        delay: isLowPerformance ? 0.1 : 0.2,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        duration: isLowPerformance ? 0.8 : 1,
+        delay: 0.15,
+        ease: [0.22, 1, 0.36, 1],
       }
     }
   };
@@ -64,8 +64,17 @@ const BurgerCard = ({ burger, index, isReversed }) => {
       ref={ref}
       className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
         isReversed ? 'lg:flex-row-reverse' : ''
-      }`}
+      } relative`}
     >
+      {/* Debug indicator - remove in production */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className={`absolute -top-4 left-4 px-3 py-1 rounded text-xs font-mono ${
+          inView ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+        }`}>
+          {inView ? '✓ In View' : '✗ Not In View'}
+        </div>
+      )}
+
       {/* Image Side */}
       <motion.div
         variants={imageVariants}
@@ -106,12 +115,12 @@ const BurgerCard = ({ burger, index, isReversed }) => {
       >
         {/* Burger Name */}
         <motion.h3
-          initial={{ opacity: 0, y: isLowPerformance ? 10 : 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ 
-            duration: isLowPerformance ? 0.4 : 0.5, 
-            delay: isLowPerformance ? 0.2 : 0.3,
-            ease: [0.25, 0.46, 0.45, 0.94]
+            duration: 0.7, 
+            delay: 0.25,
+            ease: [0.22, 1, 0.36, 1]
           }}
           className="text-5xl sm:text-6xl lg:text-7xl font-black text-burger-white uppercase tracking-tighter mb-6 leading-none"
         >
@@ -120,12 +129,12 @@ const BurgerCard = ({ burger, index, isReversed }) => {
 
         {/* Description */}
         <motion.p
-          initial={{ opacity: 0, y: isLowPerformance ? 10 : 15 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ 
-            duration: isLowPerformance ? 0.4 : 0.5, 
-            delay: isLowPerformance ? 0.3 : 0.4,
-            ease: [0.25, 0.46, 0.45, 0.94]
+            duration: 0.6, 
+            delay: 0.4,
+            ease: [0.22, 1, 0.36, 1]
           }}
           className="text-lg sm:text-xl text-burger-gray leading-relaxed italic mb-8"
         >
@@ -137,20 +146,20 @@ const BurgerCard = ({ burger, index, isReversed }) => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ 
-            duration: 0.4, 
-            delay: isLowPerformance ? 0.4 : 0.5 
+            duration: 0.5, 
+            delay: 0.5 
           }}
           className="space-y-3"
         >
           {burger.ingredients.map((ingredient, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: isLowPerformance ? 0 : -15 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ 
-                duration: 0.3, 
-                delay: isLowPerformance ? 0.5 + i * 0.05 : 0.6 + i * 0.08,
-                ease: [0.25, 0.46, 0.45, 0.94]
+                duration: 0.4, 
+                delay: 0.6 + i * 0.08,
+                ease: [0.22, 1, 0.36, 1]
               }}
               className="flex items-center gap-3"
             >
@@ -165,7 +174,7 @@ const BurgerCard = ({ burger, index, isReversed }) => {
           <motion.div
             initial={{ width: 0 }}
             animate={inView ? { width: '100%' } : {}}
-            transition={{ duration: 0.6, delay: 1 }}
+            transition={{ duration: 0.8, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
             className="h-1 bg-gradient-to-r from-burger-red via-burger-orange to-transparent mt-12 rounded-full"
           />
         )}
