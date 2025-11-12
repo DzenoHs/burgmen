@@ -54,9 +54,14 @@ const Navbar = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2 cursor-pointer"
+            className="flex items-center space-x-3 cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
+            <img 
+              src="/logoburgmen.jpg" 
+              alt="BURGMEN Logo" 
+              className="h-12 w-12 object-contain rounded-full"
+            />
             <span className="text-2xl font-black text-burger-yellow tracking-tight uppercase">
               BURGMEN
             </span>

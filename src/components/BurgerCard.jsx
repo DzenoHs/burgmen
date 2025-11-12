@@ -1,29 +1,40 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { Check } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 const BurgerCard = ({ burger, index, isReversed }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15, rootMargin: '50px' }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div
-      ref={ref}
+      ref={cardRef}
       className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
         isReversed ? 'lg:flex-row-reverse' : ''
       }`}
     >
       {/* Image Side */}
-      <motion.div
-        initial={{ opacity: 0, x: isReversed ? 50 : -50 }}
-        animate={inView ? { opacity: 1, x: 0 } : {}}
-        transition={{ 
-          duration: 0.5,
-          ease: "easeOut"
-        }}
-        className={`relative ${isReversed ? 'lg:order-2' : 'lg:order-1'}`}
+      <div
+        className={`relative ${isReversed ? 'lg:order-2' : 'lg:order-1'} 
+          transition-all duration-[1200ms] ease-out
+          ${isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${isReversed ? 'translate-x-12' : '-translate-x-12'}`}`}
       >
         <div className="relative overflow-hidden rounded-2xl">
           <img
@@ -34,18 +45,13 @@ const BurgerCard = ({ burger, index, isReversed }) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-burger-black/80 via-transparent to-transparent rounded-2xl" />
         </div>
-      </motion.div>
+      </div>
 
       {/* Content Side */}
-      <motion.div
-        initial={{ opacity: 0, x: isReversed ? -50 : 50 }}
-        animate={inView ? { opacity: 1, x: 0 } : {}}
-        transition={{ 
-          duration: 0.5,
-          delay: 0.1,
-          ease: "easeOut"
-        }}
-        className={`relative ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}
+      <div
+        className={`relative ${isReversed ? 'lg:order-1' : 'lg:order-2'}
+          transition-all duration-[1200ms] ease-out delay-150
+          ${isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${isReversed ? '-translate-x-12' : 'translate-x-12'}`}`}
       >
         {/* Burger Name */}
         <h3 className="text-5xl sm:text-6xl lg:text-7xl font-black text-burger-white uppercase tracking-tighter mb-6 leading-none">
@@ -66,7 +72,7 @@ const BurgerCard = ({ burger, index, isReversed }) => {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
