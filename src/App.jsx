@@ -6,8 +6,8 @@ import AnimatedBackground from './components/AnimatedBackground';
 import LoadingScreen from './components/LoadingScreen';
 import CookieConsent from './components/CookieConsent';
 import LiveChat from './components/LiveChat';
-import NewsletterPopup from './components/NewsletterPopup';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import ContactPage from './pages/ContactPage';
@@ -31,6 +31,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage language={language} />} />
+            <Route path="/about" element={<AboutPage language={language} />} />
             <Route path="/blog" element={<BlogPage language={language} />} />
             <Route path="/blog/:id" element={<BlogPostPage language={language} />} />
             <Route path="/contact" element={<ContactPage language={language} />} />
@@ -42,9 +43,6 @@ function App() {
         
         {/* Live Chat Widget */}
         <LiveChat language={language} />
-        
-        {/* Newsletter Popup */}
-        <NewsletterPopup language={language} />
         
         {/* Cookie Consent */}
         <CookieConsent language={language} />

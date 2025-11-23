@@ -27,8 +27,8 @@ const translations = {
 const blogPostsData = {
   1: {
     title: {
-      bs: 'Kako nastaje savršeni burger: Iza kulisa BURGMEN kuhinje',
-      en: 'How the perfect burger is made: Behind BURGMEN kitchen scenes'
+      bs: 'Naša priča: Od lokalne mesnice do burger restorana',
+      en: 'Our Story: From Local Butcher to Burger Restaurant'
     },
     content: {
       bs: `

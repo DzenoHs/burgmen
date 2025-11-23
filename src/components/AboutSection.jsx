@@ -1,13 +1,15 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import { Flame, Users, Award } from 'lucide-react';
+import { Flame, Users, Award, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import ParallaxBurger from './ParallaxBurger';
 
 const translations = {
   bs: {
     title: 'NAŠA PRIČA',
-    subtitle: 'Passion for Perfect Burgers',
-    description: 'Od 2025. godine, BURGMEN donosi revoluciju u svijet burgera. Svaki burger je djelo umjetnosti, ručno pravljen sa strašću i pažnjom prema svakom detalju. Koristimo samo najkvalitetnije sastojke - 100% svježe juneće meso, domaće pecivo i sezonsko povrće od lokalnih proizvođača.',
+    subtitle: 'Homemade kvalitet u svakom zalogaju',
+    description: 'BURGMEN se razlikuje po jednom - sve pravimo sami. Vlastita proizvodnja mesa, domaća prerada i priprema. Bez posrednika, bez kompromisa. Od sirovine do gotovog burgera - potpuna kontrola kvaliteta koja garantuje autentičan ukus.',
+    readMore: 'Pročitaj cijelu priču',
     stats: {
       since: 'Od',
       fresh: 'Svježi sastojci',
@@ -16,8 +18,9 @@ const translations = {
   },
   en: {
     title: 'OUR STORY',
-    subtitle: 'Passion for Perfect Burgers',
-    description: 'Since 2025, BURGMEN has been revolutionizing the burger world. Each burger is a work of art, handcrafted with passion and attention to every detail. We use only the finest ingredients - 100% fresh beef, homemade buns and seasonal vegetables from local suppliers.',
+    subtitle: 'Homemade quality in every bite',
+    description: 'BURGMEN stands out for one thing - we make everything ourselves. Own meat production, homemade processing and preparation. No intermediaries, no compromises. From raw material to finished burger - complete quality control that guarantees authentic taste.',
+    readMore: 'Read full story',
     stats: {
       since: 'Since',
       fresh: 'Fresh ingredients',
@@ -85,6 +88,18 @@ const AboutSection = ({ language }) => {
               <p className="text-lg text-burger-gray leading-relaxed">
                 {t.description}
               </p>
+              
+              {/* Read More Button */}
+              <Link to="/about">
+                <motion.button
+                  whileHover={{ scale: 1.05, x: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="mt-6 px-8 py-3 bg-gradient-to-r from-burger-red to-burger-orange text-burger-white rounded-xl font-bold flex items-center gap-2 hover:shadow-lg hover:shadow-burger-red/50 transition-all"
+                >
+                  {t.readMore}
+                  <ArrowRight size={20} />
+                </motion.button>
+              </Link>
             </div>
 
             {/* Image */}

@@ -34,12 +34,12 @@ const blogPosts = [
   {
     id: 1,
     title: {
-      bs: 'Kako nastaje savršeni burger: Iza kulisa BURGMEN kuhinje',
-      en: 'How the perfect burger is made: Behind BURGMEN kitchen scenes'
+      bs: 'Homemade proizvodnja: Tajna našeg ukusa',
+      en: 'Homemade Production: Secret of Our Taste'
     },
     excerpt: {
-      bs: 'Otkrijte tajne naše kuhinje. Od odabira mesa do finalnog serviranja - sve što trebate znati o pripremi savršenog burgera.',
-      en: 'Discover the secrets of our kitchen. From meat selection to final serving - everything you need to know about making the perfect burger.'
+      bs: 'Sve pravimo sami - od mesa do začina. Otkrijte kako vlastita proizvodnja čini BURGMEN posebnim.',
+      en: 'We make everything ourselves - from meat to spices. Discover how own production makes BURGMEN special.'
     },
     category: 'behindScenes',
     image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop',
@@ -51,12 +51,12 @@ const blogPosts = [
   {
     id: 2,
     title: {
-      bs: 'Odabir mesa: Temelj savršenog burgera',
-      en: 'Meat Selection: Foundation of the Perfect Burger'
+      bs: 'Kontrola kvaliteta: Od sirovine do tanjura',
+      en: 'Quality Control: From Raw Material to Plate'
     },
     excerpt: {
-      bs: '100% goveđe meso, 80/20 omjer masti i mesa, svježe svaki dan. Saznajte zašto je kvalitet mesa najvažniji korak.',
-      en: '100% beef, 80/20 fat to meat ratio, fresh every day. Learn why meat quality is the most important step.'
+      bs: 'Vlastita proizvodnja znači potpunu kontrolu. Svaki korak procesa pod našom pažnjom - zato garantujemo kvalitet.',
+      en: 'Own production means complete control. Every process step under our attention - that\'s why we guarantee quality.'
     },
     category: 'behindScenes',
     image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=800&h=600&fit=crop',
@@ -68,12 +68,12 @@ const blogPosts = [
   {
     id: 3,
     title: {
-      bs: 'Priprema pljeskavice: Umjetnost oblikovanja',
-      en: 'Patty Preparation: The Art of Shaping'
+      bs: 'Dnevna isporuka: Od rane zore do vaše tanjura',
+      en: 'Daily Delivery: From Dawn to Your Plate'
     },
     excerpt: {
-      bs: 'Ručno oblikovanje, precizno 200g, nikada ne stiskamo previše. Otkrijte tehnike profesionalne pripreme.',
-      en: 'Hand-shaped, precisely 200g, never over-pressed. Discover professional preparation techniques.'
+      bs: 'Kako izgleda jutro u BURGMEN-u? Svježe meso iz naše proizvodnje stiže sa prvim jutarnjim satima.',
+      en: 'What does morning look like at BURGMEN? Fresh meat from our production arrives with the first morning hours.'
     },
     category: 'behindScenes',
     image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=600&fit=crop',
@@ -85,12 +85,12 @@ const blogPosts = [
   {
     id: 4,
     title: {
-      bs: 'Pečenje na grillu: Savršena temperatura',
-      en: 'Grilling: Perfect Temperature'
+      bs: 'Naš tim: Strast i posvećenost kvalitetu',
+      en: 'Our Team: Passion and Dedication to Quality'
     },
     excerpt: {
-      bs: '180°C, Maillard reakcija, zlatna kora spolja - sočnost unutra. Naučite tajne profesionalnog grill majstora.',
-      en: '180°C, Maillard reaction, golden crust outside - juiciness inside. Learn the secrets of professional grill masters.'
+      bs: 'Upoznajte ljude koji svakodnevno stvaraju najbolje burgere. Od kuhara do dostavljača - svi dijelimo istu ljubav.',
+      en: 'Meet the people who create the best burgers every day. From chefs to delivery drivers - we all share the same love.'
     },
     category: 'behindScenes',
     image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&h=600&fit=crop',
@@ -102,12 +102,12 @@ const blogPosts = [
   {
     id: 5,
     title: {
-      bs: 'Tajni sastojci: Naši sopstveni začini',
-      en: 'Secret Ingredients: Our Own Spices'
+      bs: 'Signature recepti: Kako nastaju naši brendirani burgeri',
+      en: 'Signature Recipes: How Our Branded Burgers Are Created'
     },
     excerpt: {
-      bs: '12 različitih začina, signature burger sos zreo 48 sati. Otkrijte šta čini naše burgere jedinstvenim.',
-      en: '12 different spices, signature burger sauce aged 48 hours. Discover what makes our burgers unique.'
+      bs: 'Classic Beast, Inferno Heat, BBQ Supreme - svaki burger ima svoju priču. Otkrijte kreativni proces iza menija.',
+      en: 'Classic Beast, Inferno Heat, BBQ Supreme - every burger has its story. Discover the creative process behind the menu.'
     },
     category: 'behindScenes',
     image: 'https://images.unsplash.com/photo-1551782450-17144efb9c50?w=800&h=600&fit=crop',
@@ -119,12 +119,12 @@ const blogPosts = [
   {
     id: 6,
     title: {
-      bs: 'Svježe povrće i kruh: Kvalitet do kraja',
-      en: 'Fresh Vegetables and Bread: Quality to the End'
+      bs: 'Atmosfera restorana: Dizajn i koncept',
+      en: 'Restaurant Atmosphere: Design and Concept'
     },
     excerpt: {
-      bs: 'Povrće isječeno svako jutro, kruh pečen lokalno po našem receptu. Svaki detalj je važan.',
-      en: 'Vegetables cut every morning, bread baked locally by our recipe. Every detail matters.'
+      bs: 'Od industrijskog dizajna do odabira muzike - kako smo stvorili jedinstveni BURGMEN doživljaj.',
+      en: 'From industrial design to music selection - how we created the unique BURGMEN experience.'
     },
     category: 'behindScenes',
     image: 'https://images.unsplash.com/photo-1520072959219-c595dc870360?w=800&h=600&fit=crop',
