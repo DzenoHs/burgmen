@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const translations = {
   bs: {
@@ -8,6 +9,7 @@ const translations = {
     burgers: 'Burgeri',
     about: 'O nama',
     gallery: 'Galerija',
+    blog: 'Blog',
     contact: 'Kontakt',
   },
   en: {
@@ -15,6 +17,7 @@ const translations = {
     burgers: 'Burgers',
     about: 'About',
     gallery: 'Gallery',
+    blog: 'Blog',
     contact: 'Contact',
   }
 };
@@ -24,11 +27,12 @@ const Navbar = ({ language, setLanguage }) => {
   const t = translations[language];
 
   const menuItems = [
-    { name: t.home, href: '#home' },
-    { name: t.burgers, href: '#burgers' },
-    { name: t.about, href: '#about' },
-    { name: t.gallery, href: '#gallery' },
-    { name: t.contact, href: '#contact' },
+    { name: t.home, href: '/', isRoute: true },
+    { name: t.burgers, href: '#burgers', isRoute: false },
+    { name: t.about, href: '#about', isRoute: false },
+    { name: t.gallery, href: '#gallery', isRoute: false },
+    { name: t.blog, href: '/blog', isRoute: true },
+    { name: t.contact, href: '/contact', isRoute: true },
   ];
 
   return (
@@ -57,15 +61,27 @@ const Navbar = ({ language, setLanguage }) => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">
             {menuItems.map((item, index) => (
-              <motion.a
-                key={index}
-                href={item.href}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 text-burger-gray hover:text-burger-red transition-colors duration-300 font-medium"
-              >
-                {item.name}
-              </motion.a>
+              item.isRoute ? (
+                <Link key={index} to={item.href}>
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-4 py-2 text-burger-gray hover:text-burger-red transition-colors duration-300 font-medium cursor-pointer"
+                  >
+                    {item.name}
+                  </motion.div>
+                </Link>
+              ) : (
+                <motion.a
+                  key={index}
+                  href={item.href}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-4 py-2 text-burger-gray hover:text-burger-red transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </motion.a>
+              )
             ))}
             
             {/* Instagram Icon */}
@@ -134,17 +150,30 @@ const Navbar = ({ language, setLanguage }) => {
           >
             <div className="px-4 py-6 space-y-3">
               {menuItems.map((item, index) => (
-                <motion.a
-                  key={index}
-                  href={item.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 text-burger-gray hover:text-burger-red hover:bg-burger-red/10 rounded-lg transition-all duration-300 font-medium"
-                >
-                  {item.name}
-                </motion.a>
+                item.isRoute ? (
+                  <Link key={index} to={item.href} onClick={() => setIsOpen(false)}>
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="block px-4 py-3 text-burger-gray hover:text-burger-red hover:bg-burger-red/10 rounded-lg transition-all duration-300 font-medium"
+                    >
+                      {item.name}
+                    </motion.div>
+                  </Link>
+                ) : (
+                  <motion.a
+                    key={index}
+                    href={item.href}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-3 text-burger-gray hover:text-burger-red hover:bg-burger-red/10 rounded-lg transition-all duration-300 font-medium"
+                  >
+                    {item.name}
+                  </motion.a>
+                )
               ))}
               
               {/* Instagram Mobile */}

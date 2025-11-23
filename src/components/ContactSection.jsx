@@ -118,7 +118,7 @@ const ContactSection = ({ language }) => {
           </div>
 
           {/* Social Media Links */}
-          <div className="relative z-10 flex flex-col items-center">
+          <div className="relative z-10 flex flex-col items-center mb-12">
             <h3 className="text-burger-white font-black text-2xl mb-6 uppercase">Pratite nas</h3>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -135,6 +135,28 @@ const ContactSection = ({ language }) => {
               ))}
             </div>
           </div>
+
+          {/* Google Maps */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10"
+          >
+            <div className="rounded-2xl overflow-hidden border-2 border-burger-red/30">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.8!2d18.1812153!3d43.9870933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475f2e2930fe9489%3A0x27bb32e1ced4e2eb!2zxIxhcsShaWpza2EgMTgsIFZpc29rbyA3MTMwMA!5e0!3m2!1sen!2sba!4v1732385000000!5m2!1sen!2sba"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

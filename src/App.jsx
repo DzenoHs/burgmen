@@ -1,20 +1,22 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import BurgerShowcase from './components/BurgerShowcase';
-import AboutSection from './components/AboutSection';
-import Gallery from './components/Gallery';
-import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import AnimatedBackground from './components/AnimatedBackground';
 import LoadingScreen from './components/LoadingScreen';
 import CookieConsent from './components/CookieConsent';
+import LiveChat from './components/LiveChat';
+import NewsletterPopup from './components/NewsletterPopup';
+import HomePage from './pages/HomePage';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   const [language, setLanguage] = useState('bs'); // 'bs' or 'en'
 
   return (
-    <>
+    <Router>
       {/* Loading Screen */}
       <LoadingScreen />
       
@@ -25,22 +27,29 @@ function App() {
         {/* Navbar */}
         <Navbar language={language} setLanguage={setLanguage} />
         
-        {/* Main Content */}
+        {/* Main Content with Routes */}
         <main>
-          <Hero language={language} />
-          <BurgerShowcase language={language} />
-          <AboutSection language={language} />
-          <Gallery language={language} />
-          <ContactSection language={language} />
+          <Routes>
+            <Route path="/" element={<HomePage language={language} />} />
+            <Route path="/blog" element={<BlogPage language={language} />} />
+            <Route path="/blog/:id" element={<BlogPostPage language={language} />} />
+            <Route path="/contact" element={<ContactPage language={language} />} />
+          </Routes>
         </main>
         
         {/* Footer */}
         <Footer language={language} />
         
+        {/* Live Chat Widget */}
+        <LiveChat language={language} />
+        
+        {/* Newsletter Popup */}
+        <NewsletterPopup language={language} />
+        
         {/* Cookie Consent */}
         <CookieConsent language={language} />
       </div>
-    </>
+    </Router>
   );
 }
 
