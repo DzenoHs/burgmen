@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn } from 'lucide-react';
+import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const translations = {
   bs: {
@@ -13,25 +13,58 @@ const translations = {
 
 const Gallery = ({ language }) => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const t = translations[language];
 
   const images = [
-    { id: 1, url: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=800&fit=crop', span: 'row-span-2' },
-    { id: 2, url: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop', span: '' },
-    { id: 3, url: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&h=400&fit=crop', span: '' },
-    { id: 4, url: 'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=600&h=600&fit=crop', span: 'row-span-2' },
-    { id: 5, url: 'https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600&h=400&fit=crop', span: '' },
-    { id: 6, url: 'https://images.unsplash.com/photo-1551782450-17144efb9c50?w=600&h=800&fit=crop', span: 'row-span-2' },
-    { id: 7, url: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=400&fit=crop', span: '' },
-    { id: 8, url: 'https://images.unsplash.com/photo-1585238341710-4a2db91c4b2e?w=600&h=400&fit=crop', span: '' },
-    { id: 9, url: 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=600&h=600&fit=crop', span: '' },
-    { id: 10, url: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&h=800&fit=crop', span: 'row-span-2' },
-    { id: 11, url: 'https://images.unsplash.com/photo-1460306855393-0410f61241c7?w=600&h=400&fit=crop', span: '' },
-    { id: 12, url: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=600&h=400&fit=crop', span: '' },
+    { id: 1, url: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&h=800&fit=crop', span: 'row-span-2' },
+    { id: 2, url: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&h=800&fit=crop', span: '' },
+    { id: 3, url: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=1200&h=800&fit=crop', span: '' },
+    { id: 4, url: 'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=1200&h=800&fit=crop', span: 'row-span-2' },
+    { id: 5, url: 'https://images.unsplash.com/photo-1520072959219-c595dc870360?w=1200&h=800&fit=crop', span: '' },
+    { id: 6, url: 'https://images.unsplash.com/photo-1551782450-17144efb9c50?w=1200&h=800&fit=crop', span: 'row-span-2' },
+    { id: 7, url: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=1200&h=800&fit=crop', span: '' },
+    { id: 8, url: 'https://images.unsplash.com/photo-1585238341710-4a2db91c4b2e?w=1200&h=800&fit=crop', span: '' },
+    { id: 9, url: 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=1200&h=800&fit=crop', span: '' },
+    { id: 10, url: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=1200&h=800&fit=crop', span: 'row-span-2' },
+    { id: 11, url: 'https://images.unsplash.com/photo-1460306855393-0410f61241c7?w=1200&h=800&fit=crop', span: '' },
+    { id: 12, url: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=1200&h=800&fit=crop', span: '' },
   ];
 
+  const openLightbox = (index) => {
+    setCurrentIndex(index);
+    setSelectedImage(images[index]);
+  };
+
+  const nextImage = (e) => {
+    e.stopPropagation();
+    const newIndex = (currentIndex + 1) % images.length;
+    setCurrentIndex(newIndex);
+    setSelectedImage(images[newIndex]);
+  };
+
+  const prevImage = (e) => {
+    e.stopPropagation();
+    const newIndex = (currentIndex - 1 + images.length) % images.length;
+    setCurrentIndex(newIndex);
+    setSelectedImage(images[newIndex]);
+  };
+
+  // Keyboard navigation
+  const handleKeyDown = (e) => {
+    if (!selectedImage) return;
+    if (e.key === 'ArrowRight') nextImage(e);
+    if (e.key === 'ArrowLeft') prevImage(e);
+    if (e.key === 'Escape') setSelectedImage(null);
+  };
+
   return (
-    <section id="gallery" className="relative py-20 px-4 sm:px-6 lg:px-8">
+    <section 
+      id="gallery" 
+      className="relative py-20 px-4 sm:px-6 lg:px-8"
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -69,7 +102,7 @@ const Gallery = ({ language }) => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className={`relative group cursor-pointer overflow-hidden rounded-xl ${image.span}`}
-              onClick={() => setSelectedImage(image)}
+              onClick={() => openLightbox(index)}
             >
               <motion.img
                 whileHover={{ scale: 1.1 }}
@@ -97,35 +130,83 @@ const Gallery = ({ language }) => {
         </div>
       </div>
 
-      {/* Lightbox */}
+      {/* Custom Lightbox */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
             onClick={() => setSelectedImage(null)}
-            className="fixed inset-0 bg-burger-black/95 backdrop-blur-lg z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/95 backdrop-blur-lg z-[9999] flex items-center justify-center p-4"
           >
+            {/* Close Button */}
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, rotate: 90 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-8 right-8 bg-burger-red/90 p-3 rounded-full text-burger-white hover:bg-burger-red transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
+              className="absolute top-4 right-4 md:top-8 md:right-8 bg-burger-red/90 p-3 rounded-full text-burger-white hover:bg-burger-red transition-colors z-10 shadow-2xl"
             >
-              <X size={32} />
+              <X size={28} />
             </motion.button>
 
+            {/* Previous Button */}
+            <motion.button
+              whileHover={{ scale: 1.1, x: -5 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-burger-red/90 p-3 rounded-full text-burger-white hover:bg-burger-red transition-colors shadow-2xl hidden md:flex"
+            >
+              <ChevronLeft size={32} />
+            </motion.button>
+
+            {/* Next Button */}
+            <motion.button
+              whileHover={{ scale: 1.1, x: 5 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-burger-red/90 p-3 rounded-full text-burger-white hover:bg-burger-red transition-colors shadow-2xl hidden md:flex"
+            >
+              <ChevronRight size={32} />
+            </motion.button>
+
+            {/* Image Counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-burger-black/80 backdrop-blur-sm px-4 py-2 rounded-full text-burger-white text-sm font-bold">
+              {currentIndex + 1} / {images.length}
+            </div>
+
+            {/* Main Image */}
             <motion.img
+              key={selectedImage.id}
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
               src={selectedImage.url}
-              alt="Full size"
-              className="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl"
+              alt={`Burger ${selectedImage.id}`}
+              className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
+
+            {/* Mobile Swipe Indicators */}
+            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2 md:hidden">
+              <button
+                onClick={prevImage}
+                className="bg-burger-red/90 p-2 rounded-full text-burger-white"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                onClick={nextImage}
+                className="bg-burger-red/90 p-2 rounded-full text-burger-white"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
