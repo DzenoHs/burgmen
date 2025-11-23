@@ -97,24 +97,6 @@ const AboutSection = ({ language }) => {
             </div>
           </div>
         </div>
-
-        {/* Stats Counter */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-burger-charcoal border border-burger-dark rounded-2xl p-8 text-center hover:border-burger-red transition-all duration-300 group"
-            >
-              <div className="inline-block mb-4">
-                <stat.icon size={48} className="text-burger-red" />
-              </div>
-              <div className="mb-2">
-                <CounterAnimation target={stat.value} suffix={stat.suffix} />
-              </div>
-              <p className="text-burger-gray font-bold uppercase tracking-wider">{stat.label}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

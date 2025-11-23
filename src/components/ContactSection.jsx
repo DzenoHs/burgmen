@@ -92,34 +92,17 @@ const ContactSection = ({ language }) => {
         </motion.div>
 
         {/* Contact Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="relative bg-burger-charcoal rounded-3xl border-2 border-burger-red/30 p-8 md:p-12 shadow-2xl hover:border-burger-red/50 transition-all duration-500"
-        >
-          {/* Neon Glow Effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-burger-red/5 via-transparent to-burger-orange/5 rounded-3xl" />
-
+        <div className="relative bg-burger-charcoal rounded-3xl border-2 border-burger-red/30 p-8 md:p-12 shadow-2xl">
           {/* Content */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {contactInfo.map((info, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center md:text-left"
               >
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                  className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-burger-red to-burger-orange rounded-full mb-4"
-                >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-burger-red to-burger-orange rounded-full mb-4">
                   <info.icon size={28} className="text-burger-white" />
-                </motion.div>
+                </div>
                 <h3 className="text-burger-white font-black text-xl mb-2 uppercase tracking-tight">
                   {info.title}
                 </h3>
@@ -130,52 +113,29 @@ const ContactSection = ({ language }) => {
                     <p className="text-burger-gray leading-relaxed mt-1">{t.schedule3}</p>
                   </>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Social Media Links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative z-10 flex flex-col items-center"
-          >
+          <div className="relative z-10 flex flex-col items-center">
             <h3 className="text-burger-white font-black text-2xl mb-6 uppercase">Pratite nas</h3>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
-                <motion.a
+                <a
                   key={index}
                   href={social.url}
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-14 h-14 bg-burger-dark border-2 border-burger-red/30 hover:border-burger-red rounded-full flex items-center justify-center text-burger-gray hover:text-burger-red transition-all duration-300"
                   aria-label={social.label}
                 >
                   <social.icon size={24} />
-                </motion.a>
+                </a>
               ))}
             </div>
-          </motion.div>
-
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="relative z-10 text-center mt-12"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-gradient-to-r from-burger-red to-burger-neon-red text-burger-white font-black text-xl uppercase rounded-full shadow-2xl shadow-burger-red/30 hover:shadow-burger-red/50 transition-all duration-300"
-            >
-              Posjetite nas 📍
-            </motion.button>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -92,13 +92,34 @@ const Navbar = ({ language, setLanguage }) => {
             </motion.button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-burger-white hover:text-burger-red transition-colors"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* Mobile Controls */}
+          <div className="md:hidden flex items-center gap-3">
+            {/* Instagram Mobile Icon */}
+            <a
+              href="https://www.instagram.com/burgmen__/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-burger-white hover:text-burger-red transition-colors"
+            >
+              <Instagram size={24} />
+            </a>
+            
+            {/* Language Toggle Mobile Icon */}
+            <button
+              onClick={() => setLanguage(language === 'bs' ? 'en' : 'bs')}
+              className="p-2 bg-burger-red/20 hover:bg-burger-red text-burger-white rounded-lg transition-all duration-300 font-bold"
+            >
+              {language === 'bs' ? 'EN' : 'BA'}
+            </button>
+            
+            {/* Hamburger Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-burger-white hover:text-burger-red transition-colors"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </div>
 
