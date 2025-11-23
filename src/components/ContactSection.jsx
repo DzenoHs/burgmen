@@ -1,34 +1,65 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 
-const ContactSection = () => {
+const translations = {
+  bs: {
+    title: 'KONTAKT',
+    location: 'Adresa',
+    address: 'Čaršijska 18, Visoko, BiH',
+    phone: 'Telefon',
+    phoneNumber: '+387 (61) 123-456',
+    email: 'Email',
+    emailAddress: 'info@burgmen.ba',
+    hours: 'Radno vrijeme',
+    schedule: 'Pon-Pet: 9:00 - 23:00',
+    schedule2: 'Subota: 14:00 - 00:00',
+    schedule3: 'Nedjelja: 14:00 - 23:00',
+  },
+  en: {
+    title: 'CONTACT',
+    location: 'Address',
+    address: 'Čaršijska 18, Visoko, BiH',
+    phone: 'Phone',
+    phoneNumber: '+387 (61) 123-456',
+    email: 'Email',
+    emailAddress: 'info@burgmen.ba',
+    hours: 'Working Hours',
+    schedule: 'Mon-Fri: 9:00 AM - 11:00 PM',
+    schedule2: 'Saturday: 2:00 PM - 12:00 AM',
+    schedule3: 'Sunday: 2:00 PM - 11:00 PM',
+  }
+};
+
+const ContactSection = ({ language }) => {
+  const t = translations[language];
+  
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Adresa',
-      content: 'Zmaja od Bosne 123, Sarajevo, BiH',
+      title: t.location,
+      content: t.address,
     },
     {
       icon: Phone,
-      title: 'Telefon',
-      content: '+387 (33) 123-456',
+      title: t.phone,
+      content: t.phoneNumber,
     },
     {
       icon: Mail,
-      title: 'Email',
-      content: 'info@burgmen.ba',
+      title: t.email,
+      content: t.emailAddress,
     },
     {
       icon: Clock,
-      title: 'Radno vrijeme',
-      content: 'Pon-Ned: 11:00 - 23:00',
+      title: t.hours,
+      content: t.schedule,
     },
   ];
 
   const socialLinks = [
-    { icon: Facebook, url: '#', label: 'Facebook' },
-    { icon: Instagram, url: '#', label: 'Instagram' },
-    { icon: Twitter, url: '#', label: 'Twitter' },
+    { icon: Facebook, url: 'https://www.facebook.com/burgmen', label: 'Facebook' },
+    { icon: Instagram, url: 'https://www.instagram.com/burgmen__/', label: 'Instagram' },
+    { icon: Twitter, url: 'https://twitter.com/burgmen', label: 'Twitter' },
   ];
 
   return (
@@ -49,7 +80,7 @@ const ContactSection = () => {
             transition={{ duration: 0.6 }}
             className="text-5xl sm:text-6xl md:text-7xl font-black text-burger-yellow mb-4 uppercase tracking-tighter"
           >
-            Kontakt
+            {t.title}
           </motion.h2>
           <motion.div
             initial={{ width: 0 }}
@@ -93,6 +124,12 @@ const ContactSection = () => {
                   {info.title}
                 </h3>
                 <p className="text-burger-gray leading-relaxed">{info.content}</p>
+                {info.title === t.hours && (
+                  <>
+                    <p className="text-burger-gray leading-relaxed mt-1">{t.schedule2}</p>
+                    <p className="text-burger-gray leading-relaxed mt-1">{t.schedule3}</p>
+                  </>
+                )}
               </motion.div>
             ))}
           </div>

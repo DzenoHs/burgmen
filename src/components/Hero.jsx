@@ -1,11 +1,52 @@
+import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
-const Hero = () => {
+const translations = {
+  bs: {
+    titles: ['LEGENDARNI BURGERI', 'AUTENTIČNI UKUS', 'SAVRŠENA KOMBINACIJA', 'NEZABORAVAN DOŽIVLJAJ'],
+    subtitle: 'Ručno pravljeno savršenstvo od 2025',
+  },
+  en: {
+    titles: ['LEGENDARY BURGERS', 'AUTHENTIC TASTE', 'PERFECT COMBINATION', 'UNFORGETTABLE EXPERIENCE'],
+    subtitle: 'Handcrafted perfection since 2025',
+  }
+};
+
+const Hero = ({ language }) => {
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const t = translations[language];
+  const [currentTitleIndex, setCurrentTitleIndex] = React.useState(0);
+  const [displayText, setDisplayText] = React.useState('');
+  const [isDeleting, setIsDeleting] = React.useState(false);
 
-  const titleWords = "LEGENDARNI BURGERI".split(' ');
+  // Typewriter effect
+  React.useEffect(() => {
+    const currentTitle = t.titles[currentTitleIndex];
+    
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (displayText.length < currentTitle.length) {
+          setDisplayText(currentTitle.substring(0, displayText.length + 1));
+        } else {
+          // Pause before deleting
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        // Deleting
+        if (displayText.length > 0) {
+          setDisplayText(currentTitle.substring(0, displayText.length - 1));
+        } else {
+          setIsDeleting(false);
+          setCurrentTitleIndex((prev) => (prev + 1) % t.titles.length);
+        }
+      }
+    }, isDeleting ? 50 : 100);
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, currentTitleIndex, t.titles]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -21,25 +62,22 @@ const Hero = () => {
       </div>
 
       <motion.div style={{ opacity }} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Massive Animated Title */}
-        <div className="mb-12 overflow-hidden">
-          <motion.h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black leading-none tracking-tighter">
-            {titleWords.map((word, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 100, rotateX: 90 }}
-                animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                transition={{
-                  duration: 1,
-                  delay: index * 0.2,
-                  ease: [0.33, 1, 0.68, 1],
-                }}
-                className="inline-block mr-6 bg-gradient-to-r from-burger-red via-burger-orange to-burger-yellow bg-clip-text text-transparent"
-                style={{ backgroundSize: '200% auto', perspective: '1000px' }}
-              >
-                {word}
-              </motion.span>
-            ))}
+        {/* Typewriter Animated Title */}
+        <div className="mb-12 overflow-hidden min-h-[200px] flex items-center justify-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-none tracking-tighter text-white"
+          >
+            {displayText}
+            <motion.span
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 0.8, repeat: Infinity }}
+              className="text-burger-red"
+            >
+              |
+            </motion.span>
           </motion.h1>
         </div>
 
@@ -50,7 +88,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-2xl sm:text-3xl md:text-4xl text-burger-gray font-light italic mb-20 tracking-wide"
         >
-          Ručno pravljeno savršenstvo od 2025
+          {t.subtitle}
         </motion.p>
 
         {/* Scroll Indicator */}
@@ -60,18 +98,7 @@ const Hero = () => {
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-12 left-1/2 -translate-x-1/2"
         >
-          <motion.div
-            animate={{ y: [0, 15, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-            className="flex flex-col items-center text-burger-yellow cursor-pointer"
-            onClick={() => {
-              const element = document.querySelector('#burgers');
-              element?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            <span className="text-sm uppercase tracking-widest mb-3 font-bold">Skroluj za više</span>
-            <ChevronDown size={40} strokeWidth={3} />
-          </motion.div>
+          
         </motion.div>
       </motion.div>
     </section>

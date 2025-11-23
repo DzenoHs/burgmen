@@ -1,141 +1,160 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe, Instagram } from 'lucide-react';
 
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const translations = {
+  bs: {
+    home: 'Početna',
+    burgers: 'Burgeri',
+    about: 'O nama',
+    gallery: 'Galerija',
+    contact: 'Kontakt',
+  },
+  en: {
+    home: 'Home',
+    burgers: 'Burgers',
+    about: 'About',
+    gallery: 'Gallery',
+    contact: 'Contact',
+  }
+};
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+const Navbar = ({ language, setLanguage }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const t = translations[language];
 
-  const navLinks = [
-    { name: 'Početna', href: '#home' },
-    { name: 'Burgeri', href: '#burgers' },
-    { name: 'O nama', href: '#about' },
-    { name: 'Galerija', href: '#gallery' },
-    { name: 'Kontakt', href: '#contact' },
+  const menuItems = [
+    { name: t.home, href: '#home' },
+    { name: t.burgers, href: '#burgers' },
+    { name: t.about, href: '#about' },
+    { name: t.gallery, href: '#gallery' },
+    { name: t.contact, href: '#contact' },
   ];
-
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
-  };
 
   return (
     <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-burger-black/98 backdrop-blur-xl shadow-2xl shadow-burger-red/10 border-b border-burger-red/20'
-          : 'bg-burger-black/20 backdrop-blur-md'
-      }`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-burger-black/80 backdrop-blur-md border-b border-burger-red/20"
     >
-      {/* Scroll Progress Bar */}
-      <motion.div
-        className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-burger-red via-burger-orange to-burger-yellow"
-        style={{
-          width: `${(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100}%`,
-        }}
-      />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3 cursor-pointer"
-            onClick={() => scrollToSection('#home')}
+            className="flex items-center space-x-3"
           >
             <img 
               src="/logoburgmen.jpg" 
               alt="BURGMEN Logo" 
               className="h-12 w-12 object-contain rounded-full"
             />
-            <span className="text-2xl font-black text-burger-yellow tracking-tight uppercase">
-              BURGMEN
+            <span className="text-2xl font-black text-burger-white tracking-tight">
+              BURG<span className="text-burger-red">MEN</span>
             </span>
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link, index) => (
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-1">
+            {menuItems.map((item, index) => (
               <motion.a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(link.href);
-                }}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-burger-white hover:text-burger-red font-bold uppercase tracking-wider text-sm transition-colors duration-300 relative group"
+                key={index}
+                href={item.href}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-4 py-2 text-burger-gray hover:text-burger-red transition-colors duration-300 font-medium"
               >
-                {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-burger-red group-hover:w-full transition-all duration-300" />
+                {item.name}
               </motion.a>
             ))}
+            
+            {/* Instagram Icon */}
+            <motion.a
+              href="https://www.instagram.com/burgmen__/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="ml-2 p-2 text-burger-white hover:text-burger-red transition-colors duration-300"
+            >
+              <Instagram size={24} />
+            </motion.a>
+            
+            {/* Language Toggle */}
+            <motion.button
+              onClick={() => setLanguage(language === 'bs' ? 'en' : 'bs')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="ml-2 px-4 py-2 bg-burger-red/20 hover:bg-burger-red text-burger-white rounded-lg transition-all duration-300 font-bold flex items-center gap-2"
+            >
+              <Globe size={18} />
+              {language === 'bs' ? 'EN' : 'BA'}
+            </motion.button>
           </div>
 
-          {/* CTA Button - REMOVED FOR SHOWCASE */}
-          {/* <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="hidden md:block px-6 py-3 bg-gradient-to-r from-burger-red to-burger-neon-red text-burger-white font-black uppercase rounded-full shadow-lg shadow-burger-red/50 hover:shadow-burger-red/80 transition-all duration-300 animate-glow-pulse"
-          >
-            ORDER NOW
-          </motion.button> */}
-
           {/* Mobile Menu Button */}
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-burger-white p-2"
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 text-burger-white hover:text-burger-red transition-colors"
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </motion.button>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {isMobileMenuOpen && (
+        {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-burger-black/98 backdrop-blur-lg border-t border-burger-red/20"
+            className="md:hidden bg-burger-black/95 backdrop-blur-lg border-t border-burger-red/20"
           >
-            <div className="px-4 py-6 space-y-4">
-              {navLinks.map((link, index) => (
+            <div className="px-4 py-6 space-y-3">
+              {menuItems.map((item, index) => (
                 <motion.a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.href);
-                  }}
+                  key={index}
+                  href={item.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="block text-burger-white hover:text-burger-red font-bold uppercase tracking-wider text-lg py-2 transition-colors duration-300"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-3 text-burger-gray hover:text-burger-red hover:bg-burger-red/10 rounded-lg transition-all duration-300 font-medium"
                 >
-                  {link.name}
+                  {item.name}
                 </motion.a>
               ))}
-              {/* CTA Button removed for showcase */}
+              
+              {/* Instagram Mobile */}
+              <motion.a
+                href="https://www.instagram.com/burgmen__/"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: menuItems.length * 0.1 }}
+                onClick={() => setIsOpen(false)}
+                className="w-full px-4 py-3 bg-pink-600/20 hover:bg-pink-600 text-burger-white rounded-lg transition-all duration-300 font-bold flex items-center justify-center gap-2"
+              >
+                <Instagram size={18} />
+                Instagram
+              </motion.a>
+              
+              {/* Language Toggle Mobile */}
+              <motion.button
+                onClick={() => {
+                  setLanguage(language === 'bs' ? 'en' : 'bs');
+                  setIsOpen(false);
+                }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: (menuItems.length + 1) * 0.1 }}
+                className="w-full px-4 py-3 bg-burger-red/20 hover:bg-burger-red text-burger-white rounded-lg transition-all duration-300 font-bold flex items-center justify-center gap-2"
+              >
+                <Globe size={18} />
+                {language === 'bs' ? 'English' : 'Bosanski'}
+              </motion.button>
             </div>
           </motion.div>
         )}

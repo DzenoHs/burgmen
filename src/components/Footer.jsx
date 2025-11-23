@@ -1,26 +1,59 @@
 import { motion } from 'framer-motion';
 import { Heart, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 
-const Footer = () => {
+const translations = {
+  bs: {
+    description: 'Najbolji burgeri u gradu. Ručno pravljeni sa strašću od 2025.',
+    quickLinks: 'Brzi linkovi',
+    home: 'Početna',
+    menu: 'Meni',
+    about: 'O nama',
+    gallery: 'Galerija',
+    contact: 'Kontakt',
+    legal: 'Pravno',
+    privacy: 'Politika privatnosti',
+    terms: 'Uslovi korištenja',
+    cookies: 'Kolačići',
+    rights: 'Sva prava zadržana',
+  },
+  en: {
+    description: 'Best burgers in town. Handcrafted with passion since 2025.',
+    quickLinks: 'Quick Links',
+    home: 'Home',
+    menu: 'Menu',
+    about: 'About',
+    gallery: 'Gallery',
+    contact: 'Contact',
+    legal: 'Legal',
+    privacy: 'Privacy Policy',
+    terms: 'Terms of Service',
+    cookies: 'Cookies',
+    rights: 'All rights reserved',
+  }
+};
+
+const Footer = ({ language }) => {
+  const t = translations[language];
+  
   const quickLinks = [
-    { name: 'Početna', href: '#home' },
-    { name: 'Meni', href: '#menu' },
-    { name: 'O nama', href: '#about' },
-    { name: 'Galerija', href: '#gallery' },
-    { name: 'Kontakt', href: '#contact' },
+    { name: t.home, href: '#home' },
+    { name: t.menu, href: '#menu' },
+    { name: t.about, href: '#about' },
+    { name: t.gallery, href: '#gallery' },
+    { name: t.contact, href: '#contact' },
   ];
 
   const legalLinks = [
-    { name: 'Politika privatnosti', href: '#' },
-    { name: 'Uslovi korištenja', href: '#' },
-    { name: 'Kolačići', href: '#' },
+    { name: t.privacy, href: '#' },
+    { name: t.terms, href: '#' },
+    { name: t.cookies, href: '#' },
   ];
 
   const socialLinks = [
-    { icon: Facebook, url: '#', label: 'Facebook' },
-    { icon: Instagram, url: '#', label: 'Instagram' },
-    { icon: Twitter, url: '#', label: 'Twitter' },
-    { icon: Youtube, url: '#', label: 'Youtube' },
+    { icon: Facebook, url: 'https://www.facebook.com/burgmen', label: 'Facebook' },
+    { icon: Instagram, url: 'https://www.instagram.com/burgmen__/', label: 'Instagram' },
+    { icon: Twitter, url: 'https://twitter.com/burgmen', label: 'Twitter' },
+    { icon: Youtube, url: 'https://www.youtube.com/@burgmen', label: 'Youtube' },
   ];
 
   const scrollToSection = (href) => {
@@ -53,7 +86,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-burger-gray leading-relaxed mb-4">
-              Najbolji burgeri u gradu. Ručno pravljeni sa strašću od 2025.
+              {t.description}
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (
@@ -78,7 +111,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-burger-white font-black text-xl mb-4 uppercase">Brzi linkovi</h3>
+            <h3 className="text-burger-white font-black text-xl mb-4 uppercase">{t.quickLinks}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -104,13 +137,13 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-burger-white font-black text-xl mb-4 uppercase">Kontakt</h3>
+            <h3 className="text-burger-white font-black text-xl mb-4 uppercase">{t.contact}</h3>
             <ul className="space-y-2 text-burger-gray">
-              <li>Zmaja od Bosne 123</li>
-              <li>Sarajevo, BiH</li>
+              <li>Čaršijska 18</li>
+              <li>Visoko, BiH</li>
               <li className="pt-2">
-                <a href="tel:+38733123456" className="hover:text-burger-red transition-colors">
-                  +387 (33) 123-456
+                <a href="tel:+38761123456" className="hover:text-burger-red transition-colors">
+                  +387 (61) 123-456
                 </a>
               </li>
               <li>
@@ -160,8 +193,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="text-burger-gray text-sm flex items-center gap-2"
           >
-            © 2025 BURGMEN. Napravljeno sa{' '}
-            <Heart size={16} className="text-burger-red fill-burger-red inline animate-pulse" /> za ljubitelje burgera.
+            © 2025 BURGMEN. {t.rights}
           </motion.p>
 
           {/* Legal Links */}

@@ -2,8 +2,18 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 
-const Gallery = () => {
+const translations = {
+  bs: {
+    title: 'GALERIJA',
+  },
+  en: {
+    title: 'GALLERY',
+  }
+};
+
+const Gallery = ({ language }) => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const t = translations[language];
 
   const images = [
     { id: 1, url: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=800&fit=crop', span: 'row-span-2' },
@@ -38,7 +48,7 @@ const Gallery = () => {
             transition={{ duration: 0.6 }}
             className="text-5xl sm:text-6xl md:text-7xl font-black text-burger-yellow mb-4 uppercase tracking-tighter"
           >
-            Galerija
+            {t.title}
           </motion.h2>
           <motion.div
             initial={{ width: 0 }}
