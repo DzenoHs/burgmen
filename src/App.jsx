@@ -7,30 +7,40 @@ import Gallery from './components/Gallery';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import AnimatedBackground from './components/AnimatedBackground';
+import LoadingScreen from './components/LoadingScreen';
+import CookieConsent from './components/CookieConsent';
 
 function App() {
   const [language, setLanguage] = useState('bs'); // 'bs' or 'en'
 
   return (
-    <div className="relative min-h-screen text-burger-white overflow-x-hidden">
-      {/* Animated Background */}
-      <AnimatedBackground />
+    <>
+      {/* Loading Screen */}
+      <LoadingScreen />
       
-      {/* Navbar */}
-      <Navbar language={language} setLanguage={setLanguage} />
-      
-      {/* Main Content */}
-      <main>
-        <Hero language={language} />
-        <BurgerShowcase language={language} />
-        <AboutSection language={language} />
-        <Gallery language={language} />
-        <ContactSection language={language} />
-      </main>
-      
-      {/* Footer */}
-      <Footer language={language} />
-    </div>
+      <div className="relative min-h-screen text-burger-white overflow-x-hidden">
+        {/* Animated Background */}
+        <AnimatedBackground />
+        
+        {/* Navbar */}
+        <Navbar language={language} setLanguage={setLanguage} />
+        
+        {/* Main Content */}
+        <main>
+          <Hero language={language} />
+          <BurgerShowcase language={language} />
+          <AboutSection language={language} />
+          <Gallery language={language} />
+          <ContactSection language={language} />
+        </main>
+        
+        {/* Footer */}
+        <Footer language={language} />
+        
+        {/* Cookie Consent */}
+        <CookieConsent language={language} />
+      </div>
+    </>
   );
 }
 
