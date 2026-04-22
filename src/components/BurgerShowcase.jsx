@@ -121,7 +121,7 @@ const BurgerShowcase = ({ language }) => {
         </div>
 
         {/* Burger Cards - Alternating Layout */}
-        <div className="space-y-48">
+        <div className="space-y-24 lg:space-y-48">
           {burgers.map((burger, index) => (
             <BurgerCard
               key={burger.id}
