@@ -1,37 +1,9 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
-
-const translations = {
-  bs: {
-    title: 'KONTAKT',
-    location: 'Adresa',
-    address: 'Čaršijska 18, Visoko, BiH',
-    phone: 'Telefon',
-    phoneNumber: '+387 (61) 123-456',
-    email: 'Email',
-    emailAddress: 'info@burgmen.ba',
-    hours: 'Radno vrijeme',
-    schedule: 'Pon-Pet: 9:00 - 23:00',
-    schedule2: 'Subota: 14:00 - 00:00',
-    schedule3: 'Nedjelja: 14:00 - 23:00',
-  },
-  en: {
-    title: 'CONTACT',
-    location: 'Address',
-    address: 'Čaršijska 18, Visoko, BiH',
-    phone: 'Phone',
-    phoneNumber: '+387 (61) 123-456',
-    email: 'Email',
-    emailAddress: 'info@burgmen.ba',
-    hours: 'Working Hours',
-    schedule: 'Mon-Fri: 9:00 AM - 11:00 PM',
-    schedule2: 'Saturday: 2:00 PM - 12:00 AM',
-    schedule3: 'Sunday: 2:00 PM - 11:00 PM',
-  }
-};
+import { translations } from '../translations';
 
 const ContactSection = ({ language }) => {
-  const t = translations[language];
+  const t = translations[language].contact;
   
   const contactInfo = [
     {

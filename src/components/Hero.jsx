@@ -1,15 +1,18 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const translations = {
   bs: {
-    titles: ['LEGENDARNI BURGERI', 'AUTENTIČNI UKUS', 'SAVRŠENA KOMBINACIJA', 'NEZABORAVAN DOŽIVLJAJ'],
+    titles: ['BURGER KOJI PAMTIŠ', 'NEZABORAVAN DOŽIVLJAJ'],
     subtitle: 'Ručno pravljeno savršenstvo od 2025',
+    viewMenu: 'POGLEDAJ MENI',
   },
   en: {
-    titles: ['LEGENDARY BURGERS', 'AUTHENTIC TASTE', 'PERFECT COMBINATION', 'UNFORGETTABLE EXPERIENCE'],
+    titles: ['BURGERS YOU REMEMBER', 'UNFORGETTABLE EXPERIENCE'],
     subtitle: 'Handcrafted perfection since 2025',
+    viewMenu: 'VIEW MENU',
   }
 };
 
@@ -81,15 +84,6 @@ const Hero = ({ language }) => {
           </motion.h1>
         </div>
 
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-2xl sm:text-3xl md:text-4xl text-burger-gray font-light italic mb-20 tracking-wide"
-        >
-          {t.subtitle}
-        </motion.p>
 
         {/* Scroll Indicator */}
         <motion.div

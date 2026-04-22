@@ -11,6 +11,7 @@ import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import ContactPage from './pages/ContactPage';
+import MenuPage from './pages/MenuPage';
 
 function App() {
   const [language, setLanguage] = useState('bs'); // 'bs' or 'en'
@@ -35,6 +36,7 @@ function App() {
             <Route path="/blog" element={<BlogPage language={language} />} />
             <Route path="/blog/:id" element={<BlogPostPage language={language} />} />
             <Route path="/contact" element={<ContactPage language={language} />} />
+            <Route path="/menu" element={<MenuPage language={language} />} />
           </Routes>
         </main>
         

@@ -1,8 +1,8 @@
 import Hero from '../components/Hero';
 import BurgerShowcase from '../components/BurgerShowcase';
 import AboutSection from '../components/AboutSection';
-import BlogPreview from '../components/BlogPreview';
 import Gallery from '../components/Gallery';
+import ContactSection from '../components/ContactSection';
 
 const HomePage = ({ language }) => {
   return (
@@ -10,8 +10,8 @@ const HomePage = ({ language }) => {
       <Hero language={language} />
       <BurgerShowcase language={language} />
       <AboutSection language={language} />
-      <BlogPreview language={language} />
       <Gallery language={language} />
+      <ContactSection language={language} />
     </>
   );
 };

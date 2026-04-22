@@ -18,55 +18,100 @@ export const translations = {
     burgers: {
       title: 'NAŠI BURGERI',
       classic: {
-        name: 'Classic Burger',
-        desc: 'Tradicionalni burger sa sočnim mesom, svježim povrćem i tajnim sosom',
-        ingredients: ['200g Juneće meso', 'Salata', 'Paradajz', 'Luk', 'Krastavac', 'Tajna sa']
+        name: 'CLASSIC BURGER',
+        desc: '150g junećeg mesa, brioche pecivo 90g, cheddar sir, svježi srebrni luk, kiseli krastavac, kečap, senf, majoneza',
+        ingredients: ['150g junećeg mesa', 'brioche pecivo 90g', 'cheddar sir', 'svježi srebrni luk', 'kiseli krastavac', 'kečap', 'senf', 'majoneza'],
       },
-      premium: {
-        name: 'Premium Deluxe',
-        desc: 'Luksuzni burger sa premium mesom, karamelizovanim lukom i specijalnom kombinacijom sireva',
-        ingredients: ['250g Premium junetina', 'Karamelizovani luk', 'Dupli sir', 'Truffle majoneza']
+      inferno: {
+        name: 'JALAPENO BURGER',
+        desc: '150g junećeg mesa, brioche pecivo 90g, jalapeno majoneza, kisele jalapeno papričice, BBQ sos, cheddar sir',
+        ingredients: ['150g junećeg mesa', 'brioche pecivo 90g', 'jalapeno majoneza', 'kisele jalapeno papričice', 'BBQ sos', 'cheddar sir'],
       },
       bbq: {
-        name: 'BBQ Beast',
-        desc: 'Moćan burger sa BBQ sosom, hrskavom slaninom i димљеним sirom',
-        ingredients: ['220g Dimljeno meso', 'BBQ sos', 'Dimljeni sir', 'Crispy luk']
+        name: 'BURGMEN BURGER',
+        desc: '150g junećeg mesa, brioche pecivo 90g, dimljena majoneza sa senfom, hrskavi luk, cheddar sir, kiseli krastavac, prženo suho meso',
+        ingredients: ['150g junećeg mesa', 'brioche pecivo 90g', 'dimljena majoneza sa senfom', 'hrskavi luk', 'cheddar sir', 'kiseli krastavac', 'prženo suho meso'],
       },
-      spicy: {
-        name: 'Spicy Inferno',
-        desc: 'Za ljubitelje ljutog - burger sa jalapeno papričicama i ljutim sosom',
-        ingredients: ['200g Ljuto začinjeno meso', 'Jalapeño', 'Chipotle sos', 'Pepper Jack sir']
+      truffle: {
+        name: 'PREMIUM BURGMEN',
+        desc: '50g sjeckanog ramsteka, 150g junećeg mesa, brioche pecivo 90g, demiglas majoneza, prženo suho meso, cheddar sir, svježi srebrni luk, hrskavi luk, kiseli krastavac',
+        ingredients: ['50g sjeckanog ramsteka', '150g junećeg mesa', 'brioche pecivo 90g', 'demiglas majoneza', 'prženo suho meso', 'cheddar sir', 'svježi srebrni luk', 'hrskavi luk', 'kiseli krastavac'],
       },
       mushroom: {
-        name: 'Mushroom Swiss',
-        desc: 'Elegantan burger sa šampinjonima, švajcarskim sirom i balsamic redukcijom',
-        ingredients: ['200g Meso', 'Sautéed šampinjoni', 'Swiss sir', 'Balsamic glaze']
+        name: 'MAX BURGER',
+        desc: '150g junećeg mesa, brioche pecivo 90g, cheddar sir, svježi srebrni luk, paradajz, iceberg salata, kečap, majoneza',
+        ingredients: ['150g junećeg mesa', 'brioche pecivo 90g', 'cheddar sir', 'svježi srebrni luk', 'paradajz', 'iceberg salata', 'kečap', 'majoneza'],
       },
-      bacon: {
-        name: 'Bacon Overload',
-        desc: 'Raj za ljubitelje slanine - tri vrste slanine i dimljeni sir',
-        ingredients: ['200g Meso', 'Triple slanina', 'Dimljeni Cheddar', 'Maple aioli']
+      blue: {
+        name: 'DOUBLE BURGMEN',
+        desc: '2x150g junećeg mesa, brioche pecivo 90g, dimljena majoneza sa senfom, hrskavi luk, cheddar sir, kiseli krastavac, prženo suho meso',
+        ingredients: ['2x150g junećeg mesa', 'brioche pecivo 90g', 'dimljena majoneza sa senfom', 'hrskavi luk', 'cheddar sir', 'kiseli krastavac', 'prženo suho meso'],
       },
-      chicken: {
-        name: 'Crispy Chicken',
-        desc: 'Hrskavo pileće belo meso sa ranch sosom i svježim zeljem',
-        ingredients: ['180g Crispy piletina', 'Ranch sos', 'Coleslaw', 'Pickles']
+      california: {
+        name: 'CHICKEN BURGER',
+        desc: 'Brioche pecivo, pohovani pileći file, cheddar sir, iceberg salata, majoneza',
+        ingredients: ['Brioche pecivo', 'pohovani pileći file', 'cheddar sir', 'iceberg salata', 'majoneza'],
       },
-      veggie: {
-        name: 'Veggie Supreme',
-        desc: 'Vegetarijanski burger sa quinoa pletenkom, avokadom i humusom',
-        ingredients: ['Quinoa pljeskavica', 'Avokado', 'Humus', 'Rucola', 'Sun-dried paradajz']
+      texan: {
+        name: 'PHILLY CHEESESTEAK',
+        desc: 'Brioche pecivo, 150g ramsteka, cheddar sir, demiglas majoneza',
+        ingredients: ['Brioche pecivo', '150g ramsteka', 'cheddar sir', 'demiglas majoneza'],
+      },
+      supreme: {
+        name: 'PILEĆI SENDVIČ',
+        desc: '150g piletine, pecivo, majoneza, kečap',
+        ingredients: ['150g piletine', 'pecivo', 'majoneza', 'kečap'],
+      },
+      spicy: {
+        name: 'KIDS BURGER',
+        desc: '75g junećeg mesa, brioche pecivo 60g, cheddar sir, kečap, majoneza',
+        ingredients: ['75g junećeg mesa', 'brioche pecivo 60g', 'cheddar sir', 'kečap', 'majoneza'],
+      },
+      cheese: {
+        name: 'TOST NUTELA',
+        desc: 'Tost, Nutella',
+        ingredients: ['Tost', 'Nutella'],
       }
     },
     // About
     about: {
+      backToHome: 'Nazad na početnu',
       title: 'NAŠA PRIČA',
-      subtitle: 'Passion for Perfect Burgers',
-      desc: 'Od 2025. godine, BURGMEN donosi revoluciju u svijet burgera. Svaki burger je djelo umjetnosti, ručno pravljen sa strašću i pažnjom prema svakom detalju. Koristimo samo najkvalitetnije sastojke - 100% svježe juneće meso, domaće pecivo i sezonsko povrće od lokalnih proizvođača.',
+      subtitle: 'Homemade kvalitet u svakom zalogaju',
+      desc: 'BURGMEN se razlikuje po jednom: sve radimo unutar naših kuhinja. Od sirovina do gotovog peciva svaki korak pratimo istom pažnjom i strašću.',
+      readMore: 'Pročitaj priču',
       stats: {
         since: 'Od 2025',
         fresh: '100% Svježi sastojci',
         taste: '100% Legendarni ukus'
+      },
+      tradition: {
+        title: 'Vlastita proizvodnja',
+        content: 'Vlastita proizvodnja mesa, domaća prerada i ručna priprema daju nam potpunu kontrolu nad ukusom i kvalitetom od samog početka.',
+      },
+      decision: {
+        title: 'Homemade filozofija',
+        content: 'Biramo sastojke, razvijamo recepte i oblikujemo proces sami. Burger nije samo brz zalogaj, već ručno izrađen proizvod sa karakterom.',
+      },
+      advantage: {
+        title: 'Zašto homemade?',
+        points: [
+          'Potpuna kontrola kvaliteta - od sirovina do gotovog proizvoda',
+          'Svježe, bez konzervansa i aditiva',
+          'Mogućnost kreiranja jedinstvenih recepata',
+          'Autentičan ukus kojeg ne nalazite nigdje drugdje'
+        ]
+      },
+      vision: {
+        title: 'Naša misija',
+        content: 'BURGMEN dokazuje da brzo može biti kvalitetno i ukusno. Svaki zalogaj nosi našu posvećenost i autentični stil.',
+      },
+      values: {
+        title: 'Naše vrijednosti',
+        quality: { title: 'Kvalitet', desc: 'Bez kompromisa u sastojcima' },
+        passion: { title: 'Strast', desc: 'Ljubav prema hrani u svakom zalogaju' },
+        tradition: { title: 'Tradicija', desc: 'Generacije iskustva' },
+        innovation: { title: 'Inovacija', desc: 'Moderan pristup klasici' }
       }
     },
     // Gallery
@@ -78,9 +123,14 @@ export const translations = {
       title: 'KONTAKT',
       location: 'Lokacija',
       address: 'Ferhadija 15, Sarajevo, BiH',
-      hours: 'Radno vrijeme',
-      schedule: 'Pon - Ned: 11:00 - 23:00',
       phone: 'Telefon',
+      phoneNumber: '+387 (61) 123-456',
+      email: 'Email',
+      emailAddress: 'info@burgmen.ba',
+      hours: 'Radno vrijeme',
+      schedule: 'Pon - Pet: 09:00 - 23:00',
+      schedule2: 'Subota: 14:00 - 00:00',
+      schedule3: 'Nedjelja: 14:00 - 23:00',
       social: 'Pratite nas'
     },
     // Footer
@@ -112,55 +162,100 @@ export const translations = {
     burgers: {
       title: 'OUR BURGERS',
       classic: {
-        name: 'Classic Burger',
-        desc: 'Traditional burger with juicy beef, fresh vegetables and secret sauce',
-        ingredients: ['200g Beef patty', 'Lettuce', 'Tomato', 'Onion', 'Pickle', 'Secret sauce']
+        name: 'CLASSIC BURGER',
+        desc: '150g beef, brioche bun 90g, cheddar cheese, fresh onion, pickles, ketchup, mustard, mayo',
+        ingredients: ['150g beef', 'brioche bun 90g', 'cheddar cheese', 'fresh onion', 'pickles', 'ketchup', 'mustard', 'mayo'],
       },
-      premium: {
-        name: 'Premium Deluxe',
-        desc: 'Luxury burger with premium beef, caramelized onions and special cheese blend',
-        ingredients: ['250g Premium beef', 'Caramelized onion', 'Double cheese', 'Truffle mayo']
+      inferno: {
+        name: 'JALAPENO BURGER',
+        desc: '150g beef, brioche bun 90g, jalapeno mayo, pickled jalapeno peppers, BBQ sauce, cheddar cheese',
+        ingredients: ['150g beef', 'brioche bun 90g', 'jalapeno mayo', 'pickled jalapeno peppers', 'BBQ sauce', 'cheddar cheese'],
       },
       bbq: {
-        name: 'BBQ Beast',
-        desc: 'Powerful burger with BBQ sauce, crispy bacon and smoked cheese',
-        ingredients: ['220g Smoked beef', 'BBQ sauce', 'Smoked cheese', 'Crispy onion']
+        name: 'BURGMEN BURGER',
+        desc: '150g beef, brioche bun 90g, smoked mustard mayo, crispy onion, cheddar cheese, pickles, fried cured meat',
+        ingredients: ['150g beef', 'brioche bun 90g', 'smoked mustard mayo', 'crispy onion', 'cheddar cheese', 'pickles', 'fried cured meat'],
       },
-      spicy: {
-        name: 'Spicy Inferno',
-        desc: 'For spice lovers - burger with jalapeño peppers and hot sauce',
-        ingredients: ['200g Spicy beef', 'Jalapeño', 'Chipotle sauce', 'Pepper Jack cheese']
+      truffle: {
+        name: 'PREMIUM BURGMEN',
+        desc: '50g chopped ribeye, 150g beef, brioche bun 90g, demi-glace mayo, fried cured meat, cheddar cheese, fresh onion, crispy onion, pickles',
+        ingredients: ['50g chopped ribeye', '150g beef', 'brioche bun 90g', 'demi-glace mayo', 'fried cured meat', 'cheddar cheese', 'fresh onion', 'crispy onion', 'pickles'],
       },
       mushroom: {
-        name: 'Mushroom Swiss',
-        desc: 'Elegant burger with mushrooms, Swiss cheese and balsamic reduction',
-        ingredients: ['200g Beef', 'Sautéed mushrooms', 'Swiss cheese', 'Balsamic glaze']
+        name: 'MAX BURGER',
+        desc: '150g beef, brioche bun 90g, cheddar cheese, fresh onion, tomato, iceberg lettuce, ketchup, mayo',
+        ingredients: ['150g beef', 'brioche bun 90g', 'cheddar cheese', 'fresh onion', 'tomato', 'iceberg lettuce', 'ketchup', 'mayo'],
       },
-      bacon: {
-        name: 'Bacon Overload',
-        desc: 'Bacon lover\'s paradise - three types of bacon and smoked cheese',
-        ingredients: ['200g Beef', 'Triple bacon', 'Smoked Cheddar', 'Maple aioli']
+      blue: {
+        name: 'DOUBLE BURGMEN',
+        desc: '2x150g beef, brioche bun 90g, smoked mustard mayo, crispy onion, cheddar cheese, pickles, fried cured meat',
+        ingredients: ['2x150g beef', 'brioche bun 90g', 'smoked mustard mayo', 'crispy onion', 'cheddar cheese', 'pickles', 'fried cured meat'],
       },
-      chicken: {
-        name: 'Crispy Chicken',
-        desc: 'Crispy chicken breast with ranch sauce and fresh coleslaw',
-        ingredients: ['180g Crispy chicken', 'Ranch sauce', 'Coleslaw', 'Pickles']
+      california: {
+        name: 'CHICKEN BURGER',
+        desc: 'Brioche bun, breaded chicken fillet, cheddar cheese, iceberg lettuce, mayo',
+        ingredients: ['Brioche bun', 'breaded chicken fillet', 'cheddar cheese', 'iceberg lettuce', 'mayo'],
       },
-      veggie: {
-        name: 'Veggie Supreme',
-        desc: 'Vegetarian burger with quinoa patty, avocado and hummus',
-        ingredients: ['Quinoa patty', 'Avocado', 'Hummus', 'Arugula', 'Sun-dried tomato']
+      texan: {
+        name: 'PHILLY CHEESESTEAK',
+        desc: 'Brioche bun, 150g ribeye, cheddar cheese, demi-glace mayo',
+        ingredients: ['Brioche bun', '150g ribeye', 'cheddar cheese', 'demi-glace mayo'],
+      },
+      supreme: {
+        name: 'CHICKEN SANDWICH',
+        desc: '150g chicken, bun, mayo, ketchup',
+        ingredients: ['150g chicken', 'bun', 'mayo', 'ketchup'],
+      },
+      spicy: {
+        name: 'KIDS BURGER',
+        desc: '75g beef, brioche bun 60g, cheddar cheese, ketchup, mayo',
+        ingredients: ['75g beef', 'brioche bun 60g', 'cheddar cheese', 'ketchup', 'mayo'],
+      },
+      cheese: {
+        name: 'NUTELLA TOAST',
+        desc: 'Toast, Nutella',
+        ingredients: ['Toast', 'Nutella'],
       }
     },
     // About
     about: {
+      backToHome: 'Back to home',
       title: 'OUR STORY',
-      subtitle: 'Passion for Perfect Burgers',
-      desc: 'Since 2025, BURGMEN has been revolutionizing the burger world. Each burger is a work of art, handcrafted with passion and attention to every detail. We use only the finest ingredients - 100% fresh beef, homemade buns and seasonal vegetables from local suppliers.',
+      subtitle: 'Homemade quality in every bite',
+      desc: 'BURGMEN stands apart because everything happens in-house. From raw ingredients to finished buns, every stage is overseen with care and passion.',
+      readMore: 'Read the story',
       stats: {
         since: 'Since 2025',
         fresh: '100% Fresh ingredients',
         taste: '100% Legendary taste'
+      },
+      tradition: {
+        title: 'Own Production',
+        content: 'Owning our meat production and cooking process gives us complete control over taste and standards from start to finish.',
+      },
+      decision: {
+        title: 'Homemade Philosophy',
+        content: 'We choose ingredients, craft recipes and refine the process ourselves. This is not just fast food — it is handcrafted flavor with character.',
+      },
+      advantage: {
+        title: 'Why Homemade?',
+        points: [
+          'Complete quality control - from raw materials to finished product',
+          'Fresh, without preservatives and additives',
+          'Ability to create unique recipes',
+          'Authentic taste you can’t find anywhere else'
+        ]
+      },
+      vision: {
+        title: 'Our Mission',
+        content: 'BURGMEN proves that speed and quality can coexist. Every bite carries our dedication and original style.',
+      },
+      values: {
+        title: 'Our Values',
+        quality: { title: 'Quality', desc: 'No compromise in ingredients' },
+        passion: { title: 'Passion', desc: 'Love for food in every bite' },
+        tradition: { title: 'Tradition', desc: 'Generations of experience' },
+        innovation: { title: 'Innovation', desc: 'Modern approach to classics' }
       }
     },
     // Gallery
@@ -170,11 +265,16 @@ export const translations = {
     // Contact
     contact: {
       title: 'CONTACT',
-      location: 'Location',
+      location: 'Address',
       address: 'Ferhadija 15, Sarajevo, BiH',
-      hours: 'Working Hours',
-      schedule: 'Mon - Sun: 11:00 AM - 11:00 PM',
       phone: 'Phone',
+      phoneNumber: '+387 (61) 123-456',
+      email: 'Email',
+      emailAddress: 'info@burgmen.ba',
+      hours: 'Working Hours',
+      schedule: 'Mon - Fri: 09:00 AM - 11:00 PM',
+      schedule2: 'Saturday: 2:00 PM - 12:00 AM',
+      schedule3: 'Sunday: 2:00 PM - 11:00 PM',
       social: 'Follow us'
     },
     // Footer

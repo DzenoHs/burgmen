@@ -2,37 +2,18 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const translations = {
-  bs: {
-    home: 'Početna',
-    burgers: 'Burgeri',
-    about: 'O nama',
-    gallery: 'Galerija',
-    blog: 'Blog',
-    contact: 'Kontakt',
-  },
-  en: {
-    home: 'Home',
-    burgers: 'Burgers',
-    about: 'About',
-    gallery: 'Gallery',
-    blog: 'Blog',
-    contact: 'Contact',
-  }
-};
+import { translations } from '../translations';
 
 const Navbar = ({ language, setLanguage }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const t = translations[language];
+  const t = translations[language].nav;
 
   const menuItems = [
     { name: t.home, href: '/', isRoute: true },
-    { name: t.burgers, href: '#burgers', isRoute: false },
+    { name: t.burgers, href: '/menu', isRoute: true },
     { name: t.about, href: '#about', isRoute: false },
     { name: t.gallery, href: '#gallery', isRoute: false },
     { name: t.blog, href: '/blog', isRoute: true },
-    { name: t.contact, href: '/contact', isRoute: true },
   ];
 
   return (
@@ -54,7 +35,7 @@ const Navbar = ({ language, setLanguage }) => {
               className="h-12 w-12 object-contain rounded-full"
             />
             <span className="text-2xl font-black text-burger-white tracking-tight">
-              BURG<span className="text-burger-red">MEN</span>
+              BURGMEN
             </span>
           </motion.div>
 

@@ -2,32 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { Flame, Users, Award, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import ParallaxBurger from './ParallaxBurger';
-
-const translations = {
-  bs: {
-    title: 'NAŠA PRIČA',
-    subtitle: 'Homemade kvalitet u svakom zalogaju',
-    description: 'BURGMEN se razlikuje po jednom - sve pravimo sami. Vlastita proizvodnja mesa, domaća prerada i priprema. Bez posrednika, bez kompromisa. Od sirovine do gotovog burgera - potpuna kontrola kvaliteta koja garantuje autentičan ukus.',
-    readMore: 'Pročitaj cijelu priču',
-    stats: {
-      since: 'Od',
-      fresh: 'Svježi sastojci',
-      taste: 'Legendarni ukus'
-    }
-  },
-  en: {
-    title: 'OUR STORY',
-    subtitle: 'Homemade quality in every bite',
-    description: 'BURGMEN stands out for one thing - we make everything ourselves. Own meat production, homemade processing and preparation. No intermediaries, no compromises. From raw material to finished burger - complete quality control that guarantees authentic taste.',
-    readMore: 'Read full story',
-    stats: {
-      since: 'Since',
-      fresh: 'Fresh ingredients',
-      taste: 'Legendary taste'
-    }
-  }
-};
+import { translations } from '../translations';
 
 const CounterAnimation = ({ target, duration = 2, suffix = '' }) => {
   const [count, setCount] = useState(0);
@@ -60,7 +35,7 @@ const CounterAnimation = ({ target, duration = 2, suffix = '' }) => {
 };
 
 const AboutSection = ({ language }) => {
-  const t = translations[language];
+  const t = translations[language].about;
   
   const stats = [
     { icon: Flame, value: 2025, suffix: '', label: t.stats.since },
@@ -86,7 +61,7 @@ const AboutSection = ({ language }) => {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-burger-red mb-4">{t.subtitle}</h3>
               <p className="text-lg text-burger-gray leading-relaxed">
-                {t.description}
+                {t.desc}
               </p>
               
               {/* Read More Button */}
@@ -116,13 +91,6 @@ const AboutSection = ({ language }) => {
           </div>
         </div>
       </section>
-      
-      {/* Parallax Burger after About section */}
-      <ParallaxBurger 
-        imageSrc="https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&h=800&fit=crop" 
-        index={0} 
-        language={language} 
-      />
     </>
   );
 };

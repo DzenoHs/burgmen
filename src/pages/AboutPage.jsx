@@ -1,78 +1,10 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft, Award, Users, Heart, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const translations = {
-  bs: {
-    backToHome: 'Nazad na početnu',
-    title: 'NAŠA PRIČA',
-    subtitle: 'Homemade kvalitet u svakom zalogaju',
-    tradition: {
-      title: 'Vlastita proizvodnja',
-      content: 'U BURGMEN-u vjerujemo u potpunu kontrolu kvaliteta. Zato imamo vlastitu proizvodnju mesa - od samog početka procesa. Ovo nije samo prerada, ovo je kunst. Svaki korak, od selekcije do finalne pripreme, prolazi kroz naše ruke.'
-    },
-    decision: {
-      title: 'Homemade filozofija',
-      content: 'Sve što možemo napraviti sami - pravimo sami. Naše meso, naši začini, naši recepti. Zato što znamo da najbolji rezultati dolaze kada imaš potpunu kontrolu. Burger nije samo brza hrana - to je prilika da pokažemo šta znači prava, homemade kvaliteta.'
-    },
-    advantage: {
-      title: 'Zašto homemade?',
-      points: [
-        'Potpuna kontrola kvaliteta - od sirovina do gotovog proizvoda',
-        'Svježe, bez konzervansa i aditiva',
-        'Mogućnost kreiranja jedinstvenih mješavina i recepata',
-        'Autentičan ukus koji ne možete naći nigdje drugdje'
-      ]
-    },
-    vision: {
-      title: 'Naša misija',
-      content: 'BURGMEN je više od restorana - to je dokaz da homemade kvalitet može biti brz, ukusan i pristupačan. Svaki burger koji serviramo nosi pečat naše strasti i posvećenosti. Jer vjerujemo da najbolja hrana dolazi iz srca i vlastitih ruku.'
-    },
-    values: {
-      title: 'Naše vrijednosti',
-      quality: { title: 'Kvalitet', desc: 'Bez kompromisa u sastojcima' },
-      passion: { title: 'Strast', desc: 'Ljubav prema hrani u svakom zalogaju' },
-      tradition: { title: 'Tradicija', desc: 'Generacije iskustva' },
-      innovation: { title: 'Inovacija', desc: 'Moderni pristup klasici' }
-    }
-  },
-  en: {
-    backToHome: 'Back to home',
-    title: 'OUR STORY',
-    subtitle: 'Homemade quality in every bite',
-    tradition: {
-      title: 'Own Production',
-      content: 'At BURGMEN we believe in complete quality control. That\'s why we have our own meat production - from the very beginning of the process. This is not just processing, this is an art. Every step, from selection to final preparation, goes through our hands.'
-    },
-    decision: {
-      title: 'Homemade Philosophy',
-      content: 'Everything we can make ourselves - we make ourselves. Our meat, our spices, our recipes. Because we know the best results come when you have complete control. Burger is not just fast food - it\'s an opportunity to show what real, homemade quality means.'
-    },
-    advantage: {
-      title: 'Why Homemade?',
-      points: [
-        'Complete quality control - from raw materials to finished product',
-        'Fresh, without preservatives and additives',
-        'Ability to create unique blends and recipes',
-        'Authentic taste you can\'t find anywhere else'
-      ]
-    },
-    vision: {
-      title: 'Our Mission',
-      content: 'BURGMEN is more than a restaurant - it\'s proof that homemade quality can be fast, tasty and affordable. Every burger we serve bears the mark of our passion and dedication. Because we believe the best food comes from the heart and our own hands.'
-    },
-    values: {
-      title: 'Our Values',
-      quality: { title: 'Quality', desc: 'No compromise in ingredients' },
-      passion: { title: 'Passion', desc: 'Love for food in every bite' },
-      tradition: { title: 'Tradition', desc: 'Generations of experience' },
-      innovation: { title: 'Innovation', desc: 'Modern approach to classics' }
-    }
-  }
-};
+import { translations } from '../translations';
 
 const AboutPage = ({ language }) => {
-  const t = translations[language];
+  const t = translations[language].about;
 
   const values = [
     { icon: Award, ...t.values.quality },

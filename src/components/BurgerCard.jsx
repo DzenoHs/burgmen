@@ -36,7 +36,7 @@ const BurgerCard = ({ burger, index, isReversed }) => {
           transition-all duration-[1200ms] ease-out
           ${isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${isReversed ? 'translate-x-12' : '-translate-x-12'}`}`}
       >
-        <div className="relative overflow-hidden rounded-2xl">
+        <div className="relative overflow-hidden rounded-2xl bg-burger-black">
           <img
             src={burger.image}
             alt={burger.name}
@@ -59,9 +59,18 @@ const BurgerCard = ({ burger, index, isReversed }) => {
         </h3>
 
         {/* Description */}
-        <p className="text-lg sm:text-xl text-burger-gray leading-relaxed italic mb-8">
+        <p className="text-lg sm:text-xl text-burger-gray leading-relaxed italic mb-4">
           {burger.description}
         </p>
+
+        {/* Price */}
+        {burger.price && (
+          <div className="mb-6">
+            <span className="text-2xl sm:text-3xl font-bold text-burger-yellow">
+              {burger.price}
+            </span>
+          </div>
+        )}
 
         {/* Ingredients List */}
         <div className="space-y-3">
