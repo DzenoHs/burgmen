@@ -19,7 +19,7 @@ const BurgerShowcase = ({ language }) => {
       name: t.inferno.name,
       description: t.inferno.desc,
       ingredients: t.inferno.ingredients,
-      price: "9 KM / 14 KM",
+      price: "8 KM / 13 KM",
       image: "/burgerimeni/jalapenoburger.png",
     },
     {
@@ -121,7 +121,7 @@ const BurgerShowcase = ({ language }) => {
         </div>
 
         {/* Burger Cards - Alternating Layout */}
-        <div className="space-y-24 lg:space-y-48">
+        <div className="space-y-16 lg:space-y-32">
           {burgers.map((burger, index) => (
             <BurgerCard
               key={burger.id}
