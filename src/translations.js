@@ -122,15 +122,15 @@ export const translations = {
     contact: {
       title: 'KONTAKT',
       location: 'Lokacija',
-      address: 'Ferhadija 15, Sarajevo, BiH',
+      address: 'Čaršijska 18, Visoko, BiH',
       phone: 'Telefon',
-      phoneNumber: '+387 (61) 123-456',
+      phoneNumber: '+387 62 207 567',
       email: 'Email',
-      emailAddress: 'info@burgmen.ba',
+      emailAddress: 'burgmen.bar@gmail.com',
       hours: 'Radno vrijeme',
-      schedule: 'Pon - Pet: 09:00 - 23:00',
-      schedule2: 'Subota: 14:00 - 00:00',
-      schedule3: 'Nedjelja: 14:00 - 23:00',
+      schedule: 'Pon-Čet: 09:00 - 23:00',
+      schedule2: 'Pet: 09:00 - 00:00',
+      schedule3: 'Sub: 10:00 - 00:00\nNed: 12:00 - 00:00',
       social: 'Pratite nas'
     },
     // Footer
@@ -266,15 +266,15 @@ export const translations = {
     contact: {
       title: 'CONTACT',
       location: 'Address',
-      address: 'Ferhadija 15, Sarajevo, BiH',
+      address: 'Čaršijska 18, Visoko, BiH',
       phone: 'Phone',
-      phoneNumber: '+387 (61) 123-456',
+      phoneNumber: '+387 62 207 567',
       email: 'Email',
-      emailAddress: 'info@burgmen.ba',
+      emailAddress: 'burgmen.bar@gmail.com',
       hours: 'Working Hours',
-      schedule: 'Mon - Fri: 09:00 AM - 11:00 PM',
-      schedule2: 'Saturday: 2:00 PM - 12:00 AM',
-      schedule3: 'Sunday: 2:00 PM - 11:00 PM',
+      schedule: 'Mon-Thu: 09:00 AM - 11:00 PM',
+      schedule2: 'Friday: 09:00 AM - 12:00 AM',
+      schedule3: 'Sat: 10:00 AM - 12:00 AM\nSun: 12:00 PM - 12:00 AM',
       social: 'Follow us'
     },
     // Footer

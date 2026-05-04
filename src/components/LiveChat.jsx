@@ -91,22 +91,22 @@ const translations = {
 
 const faqResponses = {
   bs: {
-    'radno vrijeme': 'Naše radno vrijeme:\n🕐 Pon-Pet: 09:00 - 23:00\n🕐 Subota: 14:00 - 00:00\n🕐 Nedjelja: 14:00 - 23:00',
-    'dostava': 'Da, imamo dostavu! 🚗\n📍 Besplatna dostava za narudžbe preko 20 KM\n⏱️ Prosječno vrijeme dostave: 30-45 min\n📞 Za narudžbe nazovite: +387 (61) 123-456',
+    'radno vrijeme': 'Naše radno vrijeme:\n🕐 Pon-Čet: 09:00 - 23:00\n🕐 Pet: 09:00 - 00:00\n🕐 Sub: 10:00 - 00:00\n🕐 Ned: 12:00 - 00:00',
+    'dostava': 'Da, imamo dostavu! 🚗\n📍 Besplatna dostava za narudžbe preko 20 KM\n⏱️ Prosječno vrijeme dostave: 30-45 min\n📞 Za narudžbe nazovite: +387 62 207 567',
     'cijene': 'Naši burgeri kreću od 8 KM do 15 KM! 🍔\n💰 Najpopularniji: Classic Beast (10 KM)\n🔥 Combo ponude dostupne svakodnevno!\n📱 Provjerite kompletan meni na našoj stranici.',
     'alergeni': 'Uzimamo alergije vrlo ozbiljno! 🥗\n✅ Bez glutena opcije dostupne\n✅ Vegetarijanske opcije\n✅ Deklarisanje svih alergena\n💬 Molimo informišite nas o alergijama pri narudžbi!',
     'lokacija': 'Nalazimo se u centru Visokog! 📍\n🏠 Adresa: Čaršijska 18, Visoko 71300\n🚗 Parking dostupan u blizini\n🗺️ Možete nas pronaći na Google Maps',
-    'kontakt': 'Kontaktirajte nas:\n📞 Telefon: +387 (61) 123-456\n📧 Email: info@burgmen.ba\n📱 Instagram: @burgmen__\n💬 Ili nam pošaljite poruku ovdje!',
-    'default': 'Hvala na pitanju! Za detaljnije informacije:\n📞 Telefon: +387 (61) 123-456\n📍 Adresa: Čaršijska 18, Visoko\n📱 Instagram: @burgmen__',
+    'kontakt': 'Kontaktirajte nas:\n📞 Telefon: +387 62 207 567\n📧 Email: burgmen.bar@gmail.com\n📱 Instagram: @burgmen__\n💬 Ili nam pošaljite poruku ovdje!',
+    'default': 'Hvala na pitanju! Za detaljnije informacije:\n📞 Telefon: +387 62 207 567\n📍 Adresa: Čaršijska 18, Visoko\n📱 Instagram: @burgmen__',
   },
   en: {
-    'working hours': 'Our working hours:\n🕐 Mon-Fri: 09:00 - 23:00\n🕐 Saturday: 14:00 - 00:00\n🕐 Sunday: 14:00 - 23:00',
-    'delivery': 'Yes, we have delivery! 🚗\n📍 Free delivery for orders over 20 KM\n⏱️ Average delivery time: 30-45 min\n📞 For orders call: +387 (61) 123-456',
+    'working hours': 'Our working hours:\n🕐 Mon-Thu: 09:00 AM - 11:00 PM\n🕐 Friday: 09:00 AM - 12:00 AM\n🕐 Sat: 10:00 AM - 12:00 AM\n🕐 Sun: 12:00 PM - 12:00 AM',
+    'delivery': 'Yes, we have delivery! 🚗\n📍 Free delivery for orders over 20 KM\n⏱️ Average delivery time: 30-45 min\n📞 For orders call: +387 62 207 567',
     'prices': 'Our burgers start from 8 KM to 15 KM! 🍔\n💰 Most popular: Classic Beast (10 KM)\n🔥 Combo deals available daily!\n📱 Check complete menu on our website.',
     'allergens': 'We take allergies very seriously! 🥗\n✅ Gluten-free options available\n✅ Vegetarian options\n✅ All allergens declared\n💬 Please inform us about allergies when ordering!',
     'location': 'We are located in the center of Visoko! 📍\n🏠 Address: Čaršijska 18, Visoko 71300\n🚗 Parking available nearby\n🗺️ You can find us on Google Maps',
-    'contact': 'Contact us:\n📞 Phone: +387 (61) 123-456\n📧 Email: info@burgmen.ba\n📱 Instagram: @burgmen__\n💬 Or send us a message here!',
-    'default': 'Thank you for your question! For more information:\n📞 Phone: +387 (61) 123-456\n📍 Address: Čaršijska 18, Visoko\n📱 Instagram: @burgmen__',
+    'contact': 'Contact us:\n📞 Phone: +387 62 207 567\n📧 Email: burgmen.bar@gmail.com\n📱 Instagram: @burgmen__\n💬 Or send us a message here!',
+    'default': 'Thank you for your question! For more information:\n📞 Phone: +387 62 207 567\n📍 Address: Čaršijska 18, Visoko\n📱 Instagram: @burgmen__',
   }
 };
 

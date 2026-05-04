@@ -17,18 +17,19 @@ const Gallery = ({ language }) => {
   const t = translations[language];
 
   const images = [
-    { id: 1, url: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&h=800&fit=crop', span: 'row-span-2' },
-    { id: 2, url: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&h=800&fit=crop', span: '' },
-    { id: 3, url: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=1200&h=800&fit=crop', span: '' },
-    { id: 4, url: 'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=1200&h=800&fit=crop', span: 'row-span-2' },
-    { id: 5, url: 'https://images.unsplash.com/photo-1520072959219-c595dc870360?w=1200&h=800&fit=crop', span: '' },
-    { id: 6, url: 'https://images.unsplash.com/photo-1551782450-17144efb9c50?w=1200&h=800&fit=crop', span: 'row-span-2' },
-    { id: 7, url: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=1200&h=800&fit=crop', span: '' },
-    { id: 8, url: 'https://images.unsplash.com/photo-1585238341710-4a2db91c4b2e?w=1200&h=800&fit=crop', span: '' },
-    { id: 9, url: 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=1200&h=800&fit=crop', span: '' },
-    { id: 10, url: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=1200&h=800&fit=crop', span: 'row-span-2' },
-    { id: 11, url: 'https://images.unsplash.com/photo-1460306855393-0410f61241c7?w=1200&h=800&fit=crop', span: '' },
-    { id: 12, url: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=1200&h=800&fit=crop', span: '' },
+    { id: 1, url: '/galerijaburgeri/DSC00669.JPG', span: 'row-span-2' },
+    { id: 2, url: '/galerijaburgeri/DSC03403.JPG', span: '' },
+    { id: 3, url: '/galerijaburgeri/DSC04017.JPG', span: '' },
+    { id: 4, url: '/galerijaburgeri/DSC04031.JPG', span: 'row-span-2' },
+    { id: 5, url: '/galerijaburgeri/DSC04250.JPG', span: '' },
+    { id: 6, url: '/galerijaburgeri/DSC04298.JPG', span: 'row-span-2' },
+    { id: 7, url: '/galerijaburgeri/DSC04335.JPG', span: '' },
+    { id: 8, url: '/galerijaburgeri/DSC04357.JPG', span: '' },
+    { id: 9, url: '/galerijaburgeri/DSC05354.JPG', span: '' },
+    { id: 10, url: '/galerijaburgeri/DSC05958.JPG', span: 'row-span-2' },
+    { id: 11, url: '/galerijaburgeri/DSC05963.JPG', span: '' },
+    { id: 12, url: '/galerijaburgeri/DSC06098.JPG', span: '' },
+    { id: 13, url: '/galerijaburgeri/DSC06103.JPG', span: '' },
   ];
 
   const openLightbox = (index) => {

@@ -48,7 +48,7 @@ const AboutPage = ({ language }) => {
           className="mb-16 rounded-2xl overflow-hidden border-2 border-burger-red/30 shadow-2xl"
         >
           <img
-            src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&h=600&fit=crop"
+            src="/galerijaburgeri/DSC04250.JPG"
             alt="BURGMEN Story"
             className="w-full h-96 object-cover"
           />

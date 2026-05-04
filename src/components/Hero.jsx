@@ -66,12 +66,12 @@ const Hero = ({ language }) => {
 
       <motion.div style={{ opacity }} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Typewriter Animated Title */}
-        <div className="mb-12 overflow-hidden min-h-[200px] flex items-center justify-center">
+        <div className="mb-8 sm:mb-12 overflow-hidden min-h-[120px] sm:min-h-[150px] md:min-h-[200px] flex items-center justify-center">
           <motion.h1 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-none tracking-tighter text-white"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none tracking-tighter text-white"
           >
             {displayText}
             <motion.span

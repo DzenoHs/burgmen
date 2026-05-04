@@ -142,13 +142,13 @@ const Footer = ({ language }) => {
               <li>Čaršijska 18</li>
               <li>Visoko, BiH</li>
               <li className="pt-2">
-                <a href="tel:+38761123456" className="hover:text-burger-red transition-colors">
-                  +387 (61) 123-456
+                <a href="tel:+38762207567" className="hover:text-burger-red transition-colors">
+                  +387 62 207 567
                 </a>
               </li>
               <li>
-                <a href="mailto:info@burgmen.ba" className="hover:text-burger-red transition-colors">
-                  info@burgmen.ba
+                <a href="mailto:burgmen.bar@gmail.com" className="hover:text-burger-red transition-colors">
+                  burgmen.bar@gmail.com
                 </a>
               </li>
             </ul>

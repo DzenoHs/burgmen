@@ -81,7 +81,7 @@ const AboutSection = ({ language }) => {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden border-2 border-burger-red/30 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800&h=600&fit=crop"
+                  src="/galerijaburgeri/DSC04250.JPG"
                   alt="Burger preparation"
                   className="w-full h-96 object-cover"
                 />

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import { translations } from '../translations';
 
 const ContactSection = ({ language }) => {
@@ -29,9 +29,8 @@ const ContactSection = ({ language }) => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, url: 'https://www.facebook.com/burgmen', label: 'Facebook' },
+    { icon: Facebook, url: 'https://www.facebook.com/profile.php?id=61574361144190&locale=hr_HR', label: 'Facebook' },
     { icon: Instagram, url: 'https://www.instagram.com/burgmen__/', label: 'Instagram' },
-    { icon: Twitter, url: 'https://twitter.com/burgmen', label: 'Twitter' },
   ];
 
   return (
