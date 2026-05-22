@@ -40,18 +40,18 @@ const LoadingScreen = () => {
               {/* Glow Ring - Smooth Pulse */}
               <motion.div
                 animate={{ 
-                  opacity: [0.3, 0.6, 0.3],
+                  opacity: [0.2, 0.5, 0.2],
                 }}
                 transition={{ 
                   duration: 2, 
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute inset-0 bg-red-600/40 rounded-full blur-2xl"
+                className="absolute inset-0 bg-white/10 rounded-full blur-2xl"
               />
 
               {/* Logo Image */}
-              <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-red-600 shadow-2xl shadow-red-600/50">
+              <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl shadow-white/10">
                 <img 
                   src="/logoburgmen.jpg" 
                   alt="BURGMEN Logo" 
@@ -67,8 +67,8 @@ const LoadingScreen = () => {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="mb-8"
             >
-              <h1 className="text-6xl md:text-7xl font-black tracking-tighter text-white">
-                BURG<span className="text-red-600">MEN</span>
+              <h1 className="text-6xl md:text-7xl font-black tracking-tighter text-white uppercase">
+                BURGMEN
               </h1>
             </motion.div>
 
@@ -99,7 +99,7 @@ const LoadingScreen = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="text-red-600 text-sm"
+                className="text-white text-sm"
               >
                 ...
               </motion.span>
