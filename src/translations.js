@@ -8,6 +8,11 @@ export const translations = {
       gallery: 'Galerija',
       contact: 'Kontakt',
     },
+    maintenance: {
+      title: 'Uskoro stižemo',
+      message: 'Naša web stranica je trenutno u izradi. Uskoro će opet biti dostupna.',
+      note: 'Hvala na strpljenju. Vratite se kasnije da pogledate cijelu stranicu.',
+    },
     // Hero
     hero: {
       title: 'LEGENDARNI BURGERI',
@@ -151,6 +156,11 @@ export const translations = {
       about: 'About',
       gallery: 'Gallery',
       contact: 'Contact',
+    },
+    maintenance: {
+      title: 'Coming Soon',
+      message: 'Our website is currently under construction and will be available soon.',
+      note: 'Thank you for your patience. Please check back later.',
     },
     // Hero
     hero: {

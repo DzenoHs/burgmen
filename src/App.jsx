@@ -6,6 +6,7 @@ import AnimatedBackground from './components/AnimatedBackground';
 import LoadingScreen from './components/LoadingScreen';
 import CookieConsent from './components/CookieConsent';
 import LiveChat from './components/LiveChat';
+import ComingSoon from './components/ComingSoon';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
@@ -15,40 +16,45 @@ import MenuPage from './pages/MenuPage';
 
 function App() {
   const [language, setLanguage] = useState('bs'); // 'bs' or 'en'
+  const siteComingSoon = true; // postavite na false kad stranica bude spremna
 
   return (
     <Router>
       {/* Loading Screen */}
       <LoadingScreen />
-      
-      <div className="relative min-h-screen text-burger-white overflow-x-hidden">
-        {/* Animated Background */}
-        <AnimatedBackground />
-        
-        {/* Navbar */}
-        <Navbar language={language} setLanguage={setLanguage} />
-        
-        {/* Main Content with Routes */}
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage language={language} />} />
-            <Route path="/about" element={<AboutPage language={language} />} />
-            <Route path="/blog" element={<BlogPage language={language} />} />
-            <Route path="/blog/:id" element={<BlogPostPage language={language} />} />
-            <Route path="/contact" element={<ContactPage language={language} />} />
-            <Route path="/menu" element={<MenuPage language={language} />} />
-          </Routes>
-        </main>
-        
-        {/* Footer */}
-        <Footer language={language} />
-        
-        {/* Live Chat Widget */}
-        <LiveChat language={language} />
-        
-        {/* Cookie Consent */}
-        <CookieConsent language={language} />
-      </div>
+
+      {siteComingSoon ? (
+        <ComingSoon language={language} />
+      ) : (
+        <div className="relative min-h-screen text-burger-white overflow-x-hidden">
+          {/* Animated Background */}
+          <AnimatedBackground />
+          
+          {/* Navbar */}
+          <Navbar language={language} setLanguage={setLanguage} />
+          
+          {/* Main Content with Routes */}
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage language={language} />} />
+              <Route path="/about" element={<AboutPage language={language} />} />
+              <Route path="/blog" element={<BlogPage language={language} />} />
+              <Route path="/blog/:id" element={<BlogPostPage language={language} />} />
+              <Route path="/contact" element={<ContactPage language={language} />} />
+              <Route path="/menu" element={<MenuPage language={language} />} />
+            </Routes>
+          </main>
+          
+          {/* Footer */}
+          <Footer language={language} />
+          
+          {/* Live Chat Widget */}
+          <LiveChat language={language} />
+          
+          {/* Cookie Consent */}
+          <CookieConsent language={language} />
+        </div>
+      )}
     </Router>
   );
 }
