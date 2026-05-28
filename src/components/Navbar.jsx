@@ -30,9 +30,9 @@ const Navbar = ({ language, setLanguage }) => {
             className="flex items-center space-x-3"
           >
             <img 
-              src="/logoburgmen.jpg" 
+              src="/burgmenbijelilogo.jpg" 
               alt="BURGMEN Logo" 
-              className="h-12 w-12 object-contain rounded-full"
+              className="h-12 w-12 object-cover rounded-full"
             />
             <span className="text-2xl font-black text-burger-white tracking-tight">
               BURGMEN

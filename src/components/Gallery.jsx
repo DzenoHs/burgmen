@@ -110,6 +110,8 @@ const Gallery = ({ language }) => {
                 transition={{ duration: 0.4 }}
                 src={image.url}
                 alt={`Burger ${image.id}`}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
               
@@ -189,6 +191,8 @@ const Gallery = ({ language }) => {
               transition={{ duration: 0.3 }}
               src={selectedImage.url}
               alt={`Burger ${selectedImage.id}`}
+              loading="lazy"
+              decoding="async"
               className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />

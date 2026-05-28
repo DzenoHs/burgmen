@@ -77,9 +77,9 @@ const Footer = ({ language }) => {
           >
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/logoburgmen.jpg" 
+                src="/burgmenbijelilogo.jpg" 
                 alt="BURGMEN Logo" 
-                className="h-16 w-16 object-contain rounded-full"
+                className="h-16 w-16 object-cover rounded-full"
               />
               <span className="text-2xl font-black text-burger-white tracking-tight">
                 BURG<span className="text-burger-red">MEN</span>

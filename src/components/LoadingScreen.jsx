@@ -53,7 +53,7 @@ const LoadingScreen = () => {
               {/* Logo Image */}
               <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl shadow-white/10">
                 <img 
-                  src="/logoburgmen.jpg" 
+                  src="/burgmenbijelilogo.jpg" 
                   alt="BURGMEN Logo" 
                   className="w-full h-full object-cover"
                 />

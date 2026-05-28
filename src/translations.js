@@ -37,6 +37,11 @@ export const translations = {
         desc: '150g junećeg mesa, brioche pecivo 90g, dimljena majoneza sa senfom, hrskavi luk, cheddar sir, kiseli krastavac, prženo suho meso',
         ingredients: ['150g junećeg mesa', 'brioche pecivo 90g', 'dimljena majoneza sa senfom', 'hrskavi luk', 'cheddar sir', 'kiseli krastavac', 'prženo suho meso'],
       },
+      tartufo: {
+        name: 'TARTUFO BURGER',
+        desc: '130g junećeg mesa, brioche pecivo 90g, cheddar sir, tartufo krema, hrskavi luk, svježi srebrni luk, kiseli krastavac',
+        ingredients: ['130g junećeg mesa', 'brioche pecivo 90g', 'cheddar sir', 'tartufo krema', 'hrskavi luk', 'svježi srebrni luk', 'kiseli krastavac'],
+      },
       truffle: {
         name: 'PREMIUM BURGMEN',
         desc: '50g sjeckanog ramsteka, 150g junećeg mesa, brioche pecivo 90g, demiglas majoneza, prženo suho meso, cheddar sir, svježi srebrni luk, hrskavi luk, kiseli krastavac',
@@ -185,6 +190,11 @@ export const translations = {
         name: 'BURGMEN BURGER',
         desc: '150g beef, brioche bun 90g, smoked mustard mayo, crispy onion, cheddar cheese, pickles, fried cured meat',
         ingredients: ['150g beef', 'brioche bun 90g', 'smoked mustard mayo', 'crispy onion', 'cheddar cheese', 'pickles', 'fried cured meat'],
+      },
+      tartufo: {
+        name: 'TARTUFO BURGER',
+        desc: '130g beef, brioche bun 90g, cheddar cheese, tartufo cream, crispy onion, fresh onion, pickles',
+        ingredients: ['130g beef', 'brioche bun 90g', 'cheddar cheese', 'tartufo cream', 'crispy onion', 'fresh onion', 'pickles'],
       },
       truffle: {
         name: 'PREMIUM BURGMEN',

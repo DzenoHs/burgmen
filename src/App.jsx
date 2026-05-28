@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -6,7 +6,7 @@ import AnimatedBackground from './components/AnimatedBackground';
 import LoadingScreen from './components/LoadingScreen';
 import CookieConsent from './components/CookieConsent';
 import LiveChat from './components/LiveChat';
-import ComingSoon from './components/ComingSoon';
+import LanguageSelector from './components/LanguageSelector';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
@@ -16,15 +16,24 @@ import MenuPage from './pages/MenuPage';
 
 function App() {
   const [language, setLanguage] = useState('bs'); // 'bs' or 'en'
-  const siteComingSoon = true; // postavite na false kad stranica bude spremna
+  const [languageSelected, setLanguageSelected] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
+  const handleLanguageSelect = (selectedLanguage) => {
+    setLanguage(selectedLanguage);
+    setLanguageSelected(true);
+  };
 
   return (
     <Router>
       {/* Loading Screen */}
       <LoadingScreen />
 
-      {siteComingSoon ? (
-        <ComingSoon language={language} />
+      {!languageSelected ? (
+        <LanguageSelector onSelect={handleLanguageSelect} />
       ) : (
         <div className="relative min-h-screen text-burger-white overflow-x-hidden">
           {/* Animated Background */}

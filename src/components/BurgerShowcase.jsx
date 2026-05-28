@@ -19,7 +19,7 @@ const BurgerShowcase = ({ language }) => {
       name: t.inferno.name,
       description: t.inferno.desc,
       ingredients: t.inferno.ingredients,
-      price: "8 KM / 13 KM",
+      price: "9 KM / 14 KM",
       image: "/burgerimeni/jalapenoburger.png",
     },
     {
@@ -32,6 +32,14 @@ const BurgerShowcase = ({ language }) => {
     },
     {
       id: 4,
+      name: t.tartufo.name,
+      description: t.tartufo.desc,
+      ingredients: t.tartufo.ingredients,
+      price: "11 KM / 16 KM",
+      image: "/burgerimeni/tartufo%20burger.jpg",
+    },
+    {
+      id: 5,
       name: t.truffle.name,
       description: t.truffle.desc,
       ingredients: t.truffle.ingredients,
@@ -39,7 +47,7 @@ const BurgerShowcase = ({ language }) => {
       image: "/burgerimeni/premium%20burgmen.png",
     },
     {
-      id: 5,
+      id: 6,
       name: t.mushroom.name,
       description: t.mushroom.desc,
       ingredients: t.mushroom.ingredients,
@@ -47,7 +55,7 @@ const BurgerShowcase = ({ language }) => {
       image: "/burgerimeni/max%20burger.png",
     },
     {
-      id: 6,
+      id: 7,
       name: t.blue.name,
       description: t.blue.desc,
       ingredients: t.blue.ingredients,
@@ -55,7 +63,7 @@ const BurgerShowcase = ({ language }) => {
       image: "/burgerimeni/double%20burgmen.png",
     },
     {
-      id: 7,
+      id: 8,
       name: t.california.name,
       description: t.california.desc,
       ingredients: t.california.ingredients,
@@ -63,7 +71,7 @@ const BurgerShowcase = ({ language }) => {
       image: "/burgerimeni/chicken%20burgher.png",
     },
     {
-      id: 8,
+      id: 9,
       name: t.texan.name,
       description: t.texan.desc,
       ingredients: t.texan.ingredients,
@@ -71,7 +79,7 @@ const BurgerShowcase = ({ language }) => {
       image: "/burgerimeni/philly%20cheesesteak.png",
     },
     {
-      id: 9,
+      id: 10,
       name: t.supreme.name,
       description: t.supreme.desc,
       ingredients: t.supreme.ingredients,
@@ -79,7 +87,7 @@ const BurgerShowcase = ({ language }) => {
       image: "/burgerimeni/pilecisendvic.png",
     },
     {
-      id: 10,
+      id: 11,
       name: t.spicy.name,
       description: t.spicy.desc,
       ingredients: t.spicy.ingredients,
@@ -87,7 +95,7 @@ const BurgerShowcase = ({ language }) => {
       image: "/burgerimeni/kids%20burger.png",
     },
     {
-      id: 11,
+      id: 12,
       name: t.cheese.name,
       description: t.cheese.desc,
       ingredients: t.cheese.ingredients,
