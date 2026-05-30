@@ -12,7 +12,7 @@ const BurgerShowcase = ({ language }) => {
       description: t.classic.desc,
       ingredients: t.classic.ingredients,
       price: "8 KM / 13 KM",
-      image: "/burgerimeni/classic%20burger.png",
+      image: "/burgerimeni/jalapenoburger.png",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const BurgerShowcase = ({ language }) => {
       description: t.inferno.desc,
       ingredients: t.inferno.ingredients,
       price: "9 KM / 14 KM",
-      image: "/burgerimeni/jalapenoburger.png",
+      image: "/burgerimeni/classic%20burger.png",
     },
     {
       id: 3,
@@ -30,16 +30,17 @@ const BurgerShowcase = ({ language }) => {
       price: "10 KM / 15 KM",
       image: "/burgerimeni/burgmen%20burger.png",
     },
+    // Tartufo burger is hidden until the menu is updated and should not appear on the site.
+    // {
+    //   id: 4,
+    //   name: t.tartufo.name,
+    //   description: t.tartufo.desc,
+    //   ingredients: t.tartufo.ingredients,
+    //   price: "11 KM / 16 KM",
+    //   image: "/burgerimeni/tartufo%20burger.jpg",
+    // },
     {
       id: 4,
-      name: t.tartufo.name,
-      description: t.tartufo.desc,
-      ingredients: t.tartufo.ingredients,
-      price: "11 KM / 16 KM",
-      image: "/burgerimeni/tartufo%20burger.jpg",
-    },
-    {
-      id: 5,
       name: t.truffle.name,
       description: t.truffle.desc,
       ingredients: t.truffle.ingredients,
