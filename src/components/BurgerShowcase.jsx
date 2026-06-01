@@ -91,7 +91,7 @@ const BurgerShowcase = ({ language }) => {
       name: t.spicy.name,
       description: t.spicy.desc,
       ingredients: t.spicy.ingredients,
-      price: "6 KM / 11 KM",
+      price: "6 KM / 10 KM",
       image: "/burgerimeni/kids burger.png",
     },
     {
