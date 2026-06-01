@@ -24,17 +24,17 @@ export const translations = {
       title: 'NAŠI BURGERI',
       classic: {
         name: 'CLASSIC BURGER',
-        desc: '150g junećeg mesa, brioche pecivo 90g, cheddar sir, svježi srebrni luk, kiseli krastavac, kečap, senf, majoneza',
+        desc: '130g junećeg mesa, brioche pecivo 90g, cheddar sir, svježi srebrni luk, kiseli krastavac, kečap, senf, majoneza',
         ingredients: ['150g junećeg mesa', 'brioche pecivo 90g', 'cheddar sir', 'svježi srebrni luk', 'kiseli krastavac', 'kečap', 'senf', 'majoneza'],
       },
       inferno: {
         name: 'JALAPENO BURGER',
-        desc: '150g junećeg mesa, brioche pecivo 90g, jalapeno majoneza, kisele jalapeno papričice, BBQ sos, cheddar sir',
+        desc: '130g junećeg mesa, brioche pecivo 90g, jalapeno majoneza, kisele jalapeno papričice, BBQ sos, cheddar sir',
         ingredients: ['150g junećeg mesa', 'brioche pecivo 90g', 'jalapeno majoneza', 'kisele jalapeno papričice', 'BBQ sos', 'cheddar sir'],
       },
       bbq: {
         name: 'BURGMEN BURGER',
-        desc: '150g junećeg mesa, brioche pecivo 90g, dimljena majoneza sa senfom, hrskavi luk, cheddar sir, kiseli krastavac, prženo suho meso',
+        desc: '130g junećeg mesa, brioche pecivo 90g, dimljena majoneza sa senfom, hrskavi luk, cheddar sir, kiseli krastavac, prženo suho meso',
         ingredients: ['150g junećeg mesa', 'brioche pecivo 90g', 'dimljena majoneza sa senfom', 'hrskavi luk', 'cheddar sir', 'kiseli krastavac', 'prženo suho meso'],
       },
       tartufo: {
@@ -44,17 +44,17 @@ export const translations = {
       },
       truffle: {
         name: 'PREMIUM BURGMEN',
-        desc: '50g sjeckanog ramsteka, 150g junećeg mesa, brioche pecivo 90g, demiglas majoneza, prženo suho meso, cheddar sir, svježi srebrni luk, hrskavi luk, kiseli krastavac',
+        desc: '50g sjeckanog ramsteka, 130g junećeg mesa, brioche pecivo 90g, demiglas majoneza, prženo suho meso, cheddar sir, svježi srebrni luk, hrskavi luk, kiseli krastavac',
         ingredients: ['50g sjeckanog ramsteka', '150g junećeg mesa', 'brioche pecivo 90g', 'demiglas majoneza', 'prženo suho meso', 'cheddar sir', 'svježi srebrni luk', 'hrskavi luk', 'kiseli krastavac'],
       },
       mushroom: {
         name: 'MAX BURGER',
-        desc: '150g junećeg mesa, brioche pecivo 90g, cheddar sir, svježi srebrni luk, paradajz, iceberg salata, kečap, majoneza',
+        desc: '130g junećeg mesa, brioche pecivo 90g, cheddar sir, svježi srebrni luk, paradajz, iceberg salata, kečap, majoneza',
         ingredients: ['150g junećeg mesa', 'brioche pecivo 90g', 'cheddar sir', 'svježi srebrni luk', 'paradajz', 'iceberg salata', 'kečap', 'majoneza'],
       },
       blue: {
         name: 'DOUBLE BURGMEN',
-        desc: '2x150g junećeg mesa, brioche pecivo 90g, dimljena majoneza sa senfom, hrskavi luk, cheddar sir, kiseli krastavac, prženo suho meso',
+        desc: '2x130g junećeg mesa, brioche pecivo 90g, dimljena majoneza sa senfom, hrskavi luk, cheddar sir, kiseli krastavac, prženo suho meso',
         ingredients: ['2x150g junećeg mesa', 'brioche pecivo 90g', 'dimljena majoneza sa senfom', 'hrskavi luk', 'cheddar sir', 'kiseli krastavac', 'prženo suho meso'],
       },
       california: {
@@ -69,13 +69,13 @@ export const translations = {
       },
       supreme: {
         name: 'PILEĆI SENDVIČ',
-        desc: '150g piletine, pecivo, majoneza, kečap',
-        ingredients: ['150g piletine', 'pecivo', 'majoneza', 'kečap'],
+        desc: 'Piletina, zelena salata, paradajz',
+        ingredients: ['Piletina', 'zelena salata', 'paradajz'],
       },
       spicy: {
         name: 'KIDS BURGER',
-        desc: '75g junećeg mesa, brioche pecivo 60g, cheddar sir, kečap, majoneza',
-        ingredients: ['75g junećeg mesa', 'brioche pecivo 60g', 'cheddar sir', 'kečap', 'majoneza'],
+        desc: '90g junećeg mesa, brioche pecivo 60g, cheddar sir, kečap, majoneza',
+        ingredients: ['90g junećeg mesa', 'brioche pecivo 60g', 'cheddar sir', 'kečap', 'majoneza'],
       },
       cheese: {
         name: 'TOST NUTELA',
@@ -178,17 +178,17 @@ export const translations = {
       title: 'OUR BURGERS',
       classic: {
         name: 'CLASSIC BURGER',
-        desc: '150g beef, brioche bun 90g, cheddar cheese, fresh onion, pickles, ketchup, mustard, mayo',
+        desc: '130g beef, brioche bun 90g, cheddar cheese, fresh onion, pickles, ketchup, mustard, mayo',
         ingredients: ['150g beef', 'brioche bun 90g', 'cheddar cheese', 'fresh onion', 'pickles', 'ketchup', 'mustard', 'mayo'],
       },
       inferno: {
         name: 'JALAPENO BURGER',
-        desc: '150g beef, brioche bun 90g, jalapeno mayo, pickled jalapeno peppers, BBQ sauce, cheddar cheese',
+        desc: '130g beef, brioche bun 90g, jalapeno mayo, pickled jalapeno peppers, BBQ sauce, cheddar cheese',
         ingredients: ['150g beef', 'brioche bun 90g', 'jalapeno mayo', 'pickled jalapeno peppers', 'BBQ sauce', 'cheddar cheese'],
       },
       bbq: {
         name: 'BURGMEN BURGER',
-        desc: '150g beef, brioche bun 90g, smoked mustard mayo, crispy onion, cheddar cheese, pickles, fried cured meat',
+        desc: '130g beef, brioche bun 90g, smoked mustard mayo, crispy onion, cheddar cheese, pickles, fried cured meat',
         ingredients: ['150g beef', 'brioche bun 90g', 'smoked mustard mayo', 'crispy onion', 'cheddar cheese', 'pickles', 'fried cured meat'],
       },
       tartufo: {
@@ -198,17 +198,17 @@ export const translations = {
       },
       truffle: {
         name: 'PREMIUM BURGMEN',
-        desc: '50g chopped ribeye, 150g beef, brioche bun 90g, demi-glace mayo, fried cured meat, cheddar cheese, fresh onion, crispy onion, pickles',
+        desc: '50g chopped ribeye, 130g beef, brioche bun 90g, demi-glace mayo, fried cured meat, cheddar cheese, fresh onion, crispy onion, pickles',
         ingredients: ['50g chopped ribeye', '150g beef', 'brioche bun 90g', 'demi-glace mayo', 'fried cured meat', 'cheddar cheese', 'fresh onion', 'crispy onion', 'pickles'],
       },
       mushroom: {
         name: 'MAX BURGER',
-        desc: '150g beef, brioche bun 90g, cheddar cheese, fresh onion, tomato, iceberg lettuce, ketchup, mayo',
+        desc: '130g beef, brioche bun 90g, cheddar cheese, fresh onion, tomato, iceberg lettuce, ketchup, mayo',
         ingredients: ['150g beef', 'brioche bun 90g', 'cheddar cheese', 'fresh onion', 'tomato', 'iceberg lettuce', 'ketchup', 'mayo'],
       },
       blue: {
         name: 'DOUBLE BURGMEN',
-        desc: '2x150g beef, brioche bun 90g, smoked mustard mayo, crispy onion, cheddar cheese, pickles, fried cured meat',
+        desc: '2x130g beef, brioche bun 90g, smoked mustard mayo, crispy onion, cheddar cheese, pickles, fried cured meat',
         ingredients: ['2x150g beef', 'brioche bun 90g', 'smoked mustard mayo', 'crispy onion', 'cheddar cheese', 'pickles', 'fried cured meat'],
       },
       california: {
@@ -223,8 +223,8 @@ export const translations = {
       },
       supreme: {
         name: 'CHICKEN SANDWICH',
-        desc: '150g chicken, bun, mayo, ketchup',
-        ingredients: ['150g chicken', 'bun', 'mayo', 'ketchup'],
+        desc: 'Chicken, green lettuce, tomato',
+        ingredients: ['Chicken', 'green lettuce', 'tomato'],
       },
       spicy: {
         name: 'KIDS BURGER',
