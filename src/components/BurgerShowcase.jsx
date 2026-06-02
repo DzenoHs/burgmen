@@ -11,8 +11,8 @@ const BurgerShowcase = ({ language }) => {
       name: t.classic.name,
       description: t.classic.desc,
       ingredients: t.classic.ingredients,
-      price: "9 KM / 13 KM",
-      image: "/burgerimeni/classic burger.png",
+      price: "9 KM / 14 KM",
+      image: "/burgerimeni/jalapenoburger.png",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const BurgerShowcase = ({ language }) => {
       description: t.inferno.desc,
       ingredients: t.inferno.ingredients,
       price: "10 KM / 15 KM",
-      image: "/burgerimeni/jalapenoburger.png",
+      image: "/burgerimeni/classic burger.png",
     },
     {
       id: 3,
