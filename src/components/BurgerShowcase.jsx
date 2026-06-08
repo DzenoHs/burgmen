@@ -11,7 +11,7 @@ const BurgerShowcase = ({ language }) => {
       name: t.classic.name,
       description: t.classic.desc,
       ingredients: t.classic.ingredients,
-      price: "9 KM / 14 KM",
+      price: "9 KM / 13 KM",
       image: "/burgerimeni/jalapenoburger.png",
     },
     {
