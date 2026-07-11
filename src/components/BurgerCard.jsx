@@ -57,7 +57,17 @@ const BurgerCard = ({ burger, index, isReversed }) => {
       >
         <div className="mx-auto lg:mx-0 max-w-3xl lg:max-w-none text-center pt-6 lg:pt-0">
           <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-burger-white uppercase tracking-tighter mb-5 leading-tight text-center">
-            {burger.name}
+            {burger.name
+              ?.split(/(STAR)/i)
+              .map((part, index) =>
+                part.toLowerCase() === 'star' ? (
+                  <span key={`${part}-${index}`} className="text-burger-red">
+                    {part}
+                  </span>
+                ) : (
+                  part
+                )
+              )}
           </h3>
 
           {/* Description */}
