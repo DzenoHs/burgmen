@@ -65,6 +65,14 @@ const BurgerCard = ({ burger, index, isReversed }) => {
             {burger.description}
           </p>
 
+          {burger.badge && (
+            <div className="mb-4">
+              <span className="inline-flex items-center rounded-full bg-burger-red px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-burger-white shadow-lg shadow-burger-red/30">
+                {burger.badge}
+              </span>
+            </div>
+          )}
+
           {/* Price */}
           {burger.price && (
             <div className="mb-5">

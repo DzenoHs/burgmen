@@ -7,6 +7,24 @@ const BurgerShowcase = ({ language }) => {
   
   const burgers = [
     {
+      id: 13,
+      name: t.starTriple.name,
+      description: t.starTriple.desc,
+      ingredients: t.starTriple.ingredients,
+      price: "12 KM / 17 KM",
+      image: "/burgerimeni/triplestar.png",
+      badge: 'NEW',
+    },
+    {
+      id: 14,
+      name: t.starDouble.name,
+      description: t.starDouble.desc,
+      ingredients: t.starDouble.ingredients,
+      price: "10 KM / 15 KM",
+      image: "/burgerimeni/doublestar.png",
+      badge: 'NEW',
+    },
+    {
       id: 1,
       name: t.classic.name,
       description: t.classic.desc,

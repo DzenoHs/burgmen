@@ -57,6 +57,16 @@ export const translations = {
         desc: '2x130g junećeg mesa, brioche pecivo 90g, dimljena majoneza sa senfom, hrskavi luk, cheddar sir, kiseli krastavac, prženo suho meso',
         ingredients: ['2x150g junećeg mesa', 'brioche pecivo 90g', 'dimljena majoneza sa senfom', 'hrskavi luk', 'cheddar sir', 'kiseli krastavac', 'prženo suho meso'],
       },
+      starTriple: {
+        name: 'BURGMEN STAR TRIPLE',
+        desc: 'Brioche pecivo 60g, 3x60g junećeg mesa, heinz sos, luk, kiseli krastavci',
+        ingredients: ['Brioche pecivo 60g', 'junetina 3 x 60g', 'heinz sos', 'luk', 'kiseli krastavci'],
+      },
+      starDouble: {
+        name: 'BURGMEN STAR DOUBLE',
+        desc: 'Brioche pecivo 60g, 2x60g junećeg mesa, heinz sos, luk, kiseli krastavci',
+        ingredients: ['Brioche pecivo 60g', 'junetina 2 x 60g', 'heinz sos', 'luk', 'kiseli krastavci'],
+      },
       california: {
         name: 'CHICKEN BURGER',
         desc: 'Brioche pecivo, pohovani pileći file, cheddar sir, iceberg salata, majoneza',
@@ -210,6 +220,16 @@ export const translations = {
         name: 'DOUBLE BURGMEN',
         desc: '2x130g beef, brioche bun 90g, smoked mustard mayo, crispy onion, cheddar cheese, pickles, fried cured meat',
         ingredients: ['2x150g beef', 'brioche bun 90g', 'smoked mustard mayo', 'crispy onion', 'cheddar cheese', 'pickles', 'fried cured meat'],
+      },
+      starTriple: {
+        name: 'BURGMEN STAR TRIPLE',
+        desc: 'Brioche bun 60g, 3x60g beef, Heinz sauce, onion, pickles',
+        ingredients: ['Brioche bun 60g', 'beef 3 x 60g', 'Heinz sauce', 'onion', 'pickles'],
+      },
+      starDouble: {
+        name: 'BURGMEN STAR DOUBLE',
+        desc: 'Brioche bun 60g, 2x60g beef, Heinz sauce, onion, pickles',
+        ingredients: ['Brioche bun 60g', 'beef 2 x 60g', 'Heinz sauce', 'onion', 'pickles'],
       },
       california: {
         name: 'CHICKEN BURGER',
