@@ -79,8 +79,8 @@ export const translations = {
       },
       supreme: {
         name: 'PILEĆI SENDVIČ',
-        desc: 'Piletina, zelena salata, paradajz',
-        ingredients: ['Piletina', 'zelena salata', 'paradajz'],
+        desc: 'Piletina, zelena salata, paradajz, kečap, majoneza',
+        ingredients: ['Piletina', 'zelena salata', 'paradajz', 'kečap', 'majoneza'],
       },
       spicy: {
         name: 'KIDS BURGER',
@@ -243,8 +243,8 @@ export const translations = {
       },
       supreme: {
         name: 'CHICKEN SANDWICH',
-        desc: 'Chicken, green lettuce, tomato',
-        ingredients: ['Chicken', 'green lettuce', 'tomato'],
+        desc: 'Chicken, green lettuce, tomato, ketchup, mayo',
+        ingredients: ['Chicken', 'green lettuce', 'tomato', 'ketchup', 'mayo'],
       },
       spicy: {
         name: 'KIDS BURGER',
