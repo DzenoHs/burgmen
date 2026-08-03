@@ -29,7 +29,7 @@ const BurgerShowcase = ({ language }) => {
       name: t.classic.name,
       description: t.classic.desc,
       ingredients: t.classic.ingredients,
-      price: "9 KM / 13 KM",
+      price: "10 KM / 15 KM",
       image: "/burgerimeni/jalapenoburger.png",
     },
     {
@@ -45,7 +45,7 @@ const BurgerShowcase = ({ language }) => {
       name: t.bbq.name,
       description: t.bbq.desc,
       ingredients: t.bbq.ingredients,
-      price: "10 KM / 15 KM",
+      price: "11 KM / 16 KM",
       image: "/burgerimeni/burgmen burger.png",
     },
     {
@@ -61,7 +61,7 @@ const BurgerShowcase = ({ language }) => {
       name: t.truffle.name,
       description: t.truffle.desc,
       ingredients: t.truffle.ingredients,
-      price: "14 KM / 19 KM",
+      price: "15 KM / 20 KM",
       image: "/burgerimeni/premium burgmen.png",
     },
     {
@@ -77,7 +77,7 @@ const BurgerShowcase = ({ language }) => {
       name: t.blue.name,
       description: t.blue.desc,
       ingredients: t.blue.ingredients,
-      price: "14 KM / 19 KM",
+      price: "15 KM / 20 KM",
       image: "/burgerimeni/double burgmen.png",
     },
     {
@@ -93,7 +93,7 @@ const BurgerShowcase = ({ language }) => {
       name: t.texan.name,
       description: t.texan.desc,
       ingredients: t.texan.ingredients,
-      price: "12 KM / 17 KM",
+      price: "13 KM / 18 KM",
       image: "/burgerimeni/philly cheesesteak.png",
     },
     {
