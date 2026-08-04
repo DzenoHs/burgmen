@@ -112,14 +112,6 @@ const BurgerShowcase = ({ language }) => {
       price: "6 KM / 10 KM",
       image: "/burgerimeni/kids burger.png",
     },
-    {
-      id: 12,
-      name: t.cheese.name,
-      description: t.cheese.desc,
-      ingredients: t.cheese.ingredients,
-      price: "5 KM",
-      image: "/burgerimeni/tost nutela.png",
-    },
   ];
 
   const { ref: titleRef, inView: titleInView } = useInView({

@@ -86,11 +86,6 @@ export const translations = {
         name: 'KIDS BURGER',
         desc: '90g junećeg mesa, brioche pecivo 60g, cheddar sir, kečap, majoneza',
         ingredients: ['90g junećeg mesa', 'brioche pecivo 60g', 'cheddar sir', 'kečap', 'majoneza'],
-      },
-      cheese: {
-        name: 'TOST NUTELA',
-        desc: 'Tost, Nutella',
-        ingredients: ['Tost', 'Nutella'],
       }
     },
     // About
@@ -250,11 +245,6 @@ export const translations = {
         name: 'KIDS BURGER',
         desc: '75g beef, brioche bun 60g, cheddar cheese, ketchup, mayo',
         ingredients: ['75g beef', 'brioche bun 60g', 'cheddar cheese', 'ketchup', 'mayo'],
-      },
-      cheese: {
-        name: 'NUTELLA TOAST',
-        desc: 'Toast, Nutella',
-        ingredients: ['Toast', 'Nutella'],
       }
     },
     // About
