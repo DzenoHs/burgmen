@@ -7,6 +7,14 @@ const BurgerShowcase = ({ language }) => {
   
   const burgers = [
     {
+      id: 100,
+      name: 'STUDENT BURGER',
+      description: '100g junećeg mesa, brioche pecivo 90g, cheddar sir, kiseli krastavac, kečap, majoneza',
+      ingredients: ['100g junećeg mesa', 'brioche pecivo 90g', 'cheddar sir', 'kiseli krastavac', 'kečap', 'majoneza'],
+      price: "8 KM / 13 KM",
+      image: "/burgerimeni/StudentBurger.jpg",
+    },
+    {
       id: 13,
       name: t.starTriple.name,
       description: t.starTriple.desc,
@@ -111,6 +119,14 @@ const BurgerShowcase = ({ language }) => {
       ingredients: t.spicy.ingredients,
       price: "6 KM / 10 KM",
       image: "/burgerimeni/kids burger.png",
+    },
+    {
+      id: 101,
+      name: 'NUTELLA BURGER',
+      description: 'Burger pecivo i Nutella',
+      ingredients: ['Burger pecivo', 'Nutella'],
+      price: "4 KM",
+      image: "/burgerimeni/Nutella Burger.jpg",
     },
   ];
 
