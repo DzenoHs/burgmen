@@ -59,13 +59,13 @@ export const translations = {
       },
       starTriple: {
         name: 'BURGMEN STAR TRIPLE',
-        desc: 'Brioche pecivo 60g, 3x60g junećeg mesa, heinz sos, luk, kiseli krastavci',
-        ingredients: ['Brioche pecivo 60g', 'junetina 3 x 60g', 'heinz sos', 'luk', 'kiseli krastavci'],
+        desc: '65g junećeg mesa',
+        ingredients: ['65g junećeg mesa'],
       },
       starDouble: {
         name: 'BURGMEN STAR DOUBLE',
-        desc: 'Brioche pecivo 60g, 2x60g junećeg mesa, heinz sos, luk, kiseli krastavci',
-        ingredients: ['Brioche pecivo 60g', 'junetina 2 x 60g', 'heinz sos', 'luk', 'kiseli krastavci'],
+        desc: '65g junećeg mesa',
+        ingredients: ['65g junećeg mesa'],
       },
       california: {
         name: 'CHICKEN BURGER',
@@ -84,8 +84,8 @@ export const translations = {
       },
       spicy: {
         name: 'KIDS BURGER',
-        desc: '90g junećeg mesa, brioche pecivo 60g, cheddar sir, kečap, majoneza',
-        ingredients: ['90g junećeg mesa', 'brioche pecivo 60g', 'cheddar sir', 'kečap', 'majoneza'],
+        desc: '65g junećeg mesa',
+        ingredients: ['65g junećeg mesa'],
       }
     },
     // About
@@ -218,13 +218,13 @@ export const translations = {
       },
       starTriple: {
         name: 'BURGMEN STAR TRIPLE',
-        desc: 'Brioche bun 60g, 3x60g beef, Heinz sauce, onion, pickles',
-        ingredients: ['Brioche bun 60g', 'beef 3 x 60g', 'Heinz sauce', 'onion', 'pickles'],
+        desc: '65g beef',
+        ingredients: ['65g beef'],
       },
       starDouble: {
         name: 'BURGMEN STAR DOUBLE',
-        desc: 'Brioche bun 60g, 2x60g beef, Heinz sauce, onion, pickles',
-        ingredients: ['Brioche bun 60g', 'beef 2 x 60g', 'Heinz sauce', 'onion', 'pickles'],
+        desc: '65g beef',
+        ingredients: ['65g beef'],
       },
       california: {
         name: 'CHICKEN BURGER',
@@ -243,8 +243,8 @@ export const translations = {
       },
       spicy: {
         name: 'KIDS BURGER',
-        desc: '75g beef, brioche bun 60g, cheddar cheese, ketchup, mayo',
-        ingredients: ['75g beef', 'brioche bun 60g', 'cheddar cheese', 'ketchup', 'mayo'],
+        desc: '65g beef',
+        ingredients: ['65g beef'],
       }
     },
     // About
