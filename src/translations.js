@@ -86,6 +86,16 @@ export const translations = {
         name: 'KIDS BURGER',
         desc: '65g junećeg mesa, brioche pecivo 60g, cheddar sir, kečap, majoneza',
         ingredients: ['65g junećeg mesa', 'brioche pecivo 60g', 'cheddar sir', 'kečap', 'majoneza'],
+      },
+      student: {
+        name: 'STUDENT BURGER',
+        desc: '100g junećeg mesa, brioche pecivo 90g, cheddar sir, kiseli krastavac, kečap, majoneza',
+        ingredients: ['100g junećeg mesa', 'brioche pecivo 90g', 'cheddar sir', 'kiseli krastavac', 'kečap', 'majoneza'],
+      },
+      tost: {
+        name: 'TOST BURGER',
+        desc: '130g junećeg mesa, brioche pecivo 90g, cheddar sir, kiseli krastavac, kečap, senf, majoneza',
+        ingredients: ['130g junećeg mesa', 'brioche pecivo 90g', 'cheddar sir', 'kiseli krastavac', 'kečap', 'senf', 'majoneza'],
       }
     },
     // About
@@ -245,6 +255,16 @@ export const translations = {
         name: 'KIDS BURGER',
         desc: '65g beef, brioche bun 60g, cheddar cheese, ketchup, mayo',
         ingredients: ['65g beef', 'brioche bun 60g', 'cheddar cheese', 'ketchup', 'mayo'],
+      },
+      student: {
+        name: 'STUDENT BURGER',
+        desc: '100g beef, brioche bun 90g, cheddar cheese, pickles, ketchup, mayo',
+        ingredients: ['100g beef', 'brioche bun 90g', 'cheddar cheese', 'pickles', 'ketchup', 'mayo'],
+      },
+      tost: {
+        name: 'TOST BURGER',
+        desc: '130g beef, brioche bun 90g, cheddar cheese, pickles, ketchup, mustard, mayo',
+        ingredients: ['130g beef', 'brioche bun 90g', 'cheddar cheese', 'pickles', 'ketchup', 'mustard', 'mayo'],
       }
     },
     // About

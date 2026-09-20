@@ -7,10 +7,19 @@ const BurgerShowcase = ({ language }) => {
   
   const burgers = [
     {
+      id: 12,
+      name: t.tost.name,
+      description: t.tost.desc,
+      ingredients: t.tost.ingredients,
+      price: "10 KM / 15 KM",
+      image: "/burgerimeni/tostburger.jpg",
+      badge: 'NEW',
+    },
+    {
       id: 100,
-      name: 'STUDENT BURGER',
-      description: '100g junećeg mesa, brioche pecivo 90g, cheddar sir, kiseli krastavac, kečap, majoneza',
-      ingredients: ['100g junećeg mesa', 'brioche pecivo 90g', 'cheddar sir', 'kiseli krastavac', 'kečap', 'majoneza'],
+      name: t.student.name,
+      description: t.student.desc,
+      ingredients: t.student.ingredients,
       price: "8 KM / 13 KM",
       image: "/burgerimeni/StudentBurger.jpg",
     },
