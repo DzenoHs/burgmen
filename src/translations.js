@@ -22,6 +22,15 @@ export const translations = {
     // Burgers
     burgers: {
       title: 'NAŠI BURGERI',
+      schoolOffer: {
+        badge: 'ŠKOLSKA PONUDA',
+        hamburger: {
+          name: 'HAMBURGER',
+        },
+        chickenHamburger: {
+          name: 'PILEĆI HAMBURGER',
+        },
+      },
       classic: {
         name: 'CLASSIC BURGER',
         desc: '130g junećeg mesa, brioche pecivo 90g, cheddar sir, svježi srebrni luk, kiseli krastavac, kečap, senf, majoneza',
@@ -191,6 +200,15 @@ export const translations = {
     // Burgers
     burgers: {
       title: 'OUR BURGERS',
+      schoolOffer: {
+        badge: 'SCHOOL OFFER',
+        hamburger: {
+          name: 'HAMBURGER',
+        },
+        chickenHamburger: {
+          name: 'CHICKEN HAMBURGER',
+        },
+      },
       classic: {
         name: 'CLASSIC BURGER',
         desc: '130g beef, brioche bun 90g, cheddar cheese, fresh onion, pickles, ketchup, mustard, mayo',

@@ -70,10 +70,11 @@ const BurgerCard = ({ burger, index, isReversed }) => {
               )}
           </h3>
 
-          {/* Description */}
-          <p className="text-base sm:text-lg text-burger-gray leading-relaxed italic mb-5">
-            {burger.description}
-          </p>
+          {burger.description && (
+            <p className="text-base sm:text-lg text-burger-gray leading-relaxed italic mb-5">
+              {burger.description}
+            </p>
+          )}
 
           {burger.badge && (
             <div className="mb-4">

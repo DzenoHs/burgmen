@@ -17,19 +17,15 @@ const Gallery = ({ language }) => {
   const t = translations[language];
 
   const images = [
-    { id: 1, url: '/galerijaburgeri/DSC00669.JPG', span: 'row-span-2' },
-    { id: 2, url: '/galerijaburgeri/DSC03403.JPG', span: '' },
-    { id: 3, url: '/galerijaburgeri/DSC04017.JPG', span: '' },
-    { id: 4, url: '/galerijaburgeri/DSC04031.JPG', span: 'row-span-2' },
-    { id: 5, url: '/galerijaburgeri/DSC04250.JPG', span: '' },
-    { id: 6, url: '/galerijaburgeri/DSC04298.JPG', span: 'row-span-2' },
-    { id: 7, url: '/galerijaburgeri/DSC04335.JPG', span: '' },
-    { id: 8, url: '/galerijaburgeri/DSC04357.JPG', span: '' },
-    { id: 9, url: '/galerijaburgeri/DSC05354.JPG', span: '' },
-    { id: 10, url: '/galerijaburgeri/DSC05958.JPG', span: 'row-span-2' },
-    { id: 11, url: '/galerijaburgeri/DSC05963.JPG', span: '' },
-    { id: 12, url: '/galerijaburgeri/DSC06098.JPG', span: '' },
-    { id: 13, url: '/galerijaburgeri/DSC06103.JPG', span: '' },
+    { id: 1, url: '/galerijaburgeri/DSC00708_5b52337d-e010-414c-aac0-4d19445cd8d7.jpg', span: 'row-span-2' },
+    { id: 2, url: '/galerijaburgeri/DSC01228_b1941803-5795-4ba5-a8da-b00ef98abd96.jpg', span: '' },
+    { id: 3, url: '/galerijaburgeri/DSC01303_c48fae72-55b8-438b-9e5c-ebed79344aa6.jpg', span: '' },
+    { id: 4, url: '/galerijaburgeri/DSC02966_2798a2a9-2b59-47c0-a823-5902320a50ea%20(1)%20(1).jpg', span: 'row-span-2' },
+    { id: 5, url: '/galerijaburgeri/DSC07379_9555b71f-2fee-4350-ac52-fde957236db3.jpg', span: '' },
+    { id: 6, url: '/galerijaburgeri/DSC07861_a5e871ec-4858-462f-b1c6-791e3674d265%20(1).jpg', span: 'row-span-2' },
+    { id: 7, url: '/galerijaburgeri/DSC08871_f9babd9d-47ba-40f5-ad45-8ac5fa25f670.jpg', span: '' },
+    { id: 8, url: '/galerijaburgeri/DSC09267_3f7851a3-10f5-4218-bf3c-b681c639328a%20(1).jpg', span: '' },
+    { id: 9, url: '/galerijaburgeri/IMG-78e18948eb4ab66265c00595e0b23e1c-V.jpg', span: '' },
   ];
 
   const openLightbox = (index) => {

@@ -4,7 +4,22 @@ import { translations } from '../translations';
 
 const BurgerShowcase = ({ language }) => {
   const t = translations[language].burgers;
-  
+
+  const schoolOfferBurgers = [
+    {
+      id: 'school-hamburger',
+      name: t.schoolOffer.hamburger.name,
+      price: '7 KM / Meni 12 KM',
+      image: '/burgerimeni/pilecihamburger.jpg',
+    },
+    {
+      id: 'school-chicken-hamburger',
+      name: t.schoolOffer.chickenHamburger.name,
+      price: '6 KM / Meni 10 KM',
+      image: '/burgerimeni/hamburger.jpg',
+    },
+  ];
+
   const burgers = [
     {
       id: 12,
@@ -30,7 +45,6 @@ const BurgerShowcase = ({ language }) => {
       ingredients: t.starTriple.ingredients,
       price: "12 KM / 17 KM",
       image: "/burgerimeni/triplestar.png",
-      badge: 'NEW',
     },
     {
       id: 14,
@@ -39,7 +53,6 @@ const BurgerShowcase = ({ language }) => {
       ingredients: t.starDouble.ingredients,
       price: "10 KM / 15 KM",
       image: "/burgerimeni/doublestar.png",
-      badge: 'NEW',
     },
     {
       id: 1,
@@ -161,6 +174,38 @@ const BurgerShowcase = ({ language }) => {
               titleInView ? 'w-64 opacity-100' : 'w-0 opacity-0'
             }`}
           />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-20 max-w-4xl mx-auto">
+          {schoolOfferBurgers.map((burger) => (
+            <article
+              key={burger.id}
+              className="overflow-hidden rounded-2xl border border-burger-red/40 bg-burger-charcoal/80 shadow-xl"
+            >
+              <div className="relative">
+                <img
+                  src={burger.image}
+                  alt={burger.name}
+                  className="h-48 sm:h-56 w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute left-3 top-3 flex flex-wrap gap-2">
+                  <span className="rounded-full bg-burger-red px-3 py-1 text-xs font-black uppercase tracking-wide text-burger-white">
+                    {t.schoolOffer.badge}
+                  </span>
+                  <span className="rounded-full bg-burger-yellow px-3 py-1 text-xs font-black uppercase tracking-wide text-burger-black">
+                    NEW
+                  </span>
+                </div>
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="mb-2 text-2xl font-black uppercase text-burger-white">
+                  {burger.name}
+                </h3>
+                <p className="text-lg font-bold text-burger-yellow">{burger.price}</p>
+              </div>
+            </article>
+          ))}
         </div>
 
         {/* Burger Cards - Alternating Layout */}
